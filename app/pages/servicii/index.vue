@@ -24,23 +24,22 @@ usePageSeo({
     </header>
 
     <ul class="list">
-      <li v-for="s in rows" :key="s.slug" v-reveal class="row" :data-svc="s.slug">
-        <NuxtLink :to="serviceUrl(s.slug)" class="row__img" tabindex="-1" aria-hidden="true">
-          <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 700px) 100vw, 260px" ratio="4 / 3" alt="" />
-          <span v-else-if="s.slug === 'mobila'" class="row__concept concept-cover" />
-          <span v-else class="row__ph"><span /></span>
+      <li v-for="s in rows" :key="s.slug" v-reveal :data-svc="s.slug">
+        <NuxtLink :to="serviceUrl(s.slug)" class="row">
+          <span class="row__img" aria-hidden="true">
+            <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 700px) 100vw, 260px" ratio="4 / 3" alt="" />
+            <span v-else-if="s.slug === 'mobila'" class="row__concept concept-cover" />
+            <span v-else class="row__ph"><span /></span>
+          </span>
+          <div class="row__body">
+            <h2>{{ s.name }}</h2>
+            <span class="row__summary">{{ s.summary }}</span>
+            <span class="row__topics">
+              <span v-for="sec in s.sections.slice(0, 4)" :key="sec.title">{{ sec.title }}</span>
+            </span>
+          </div>
+          <span class="row__cta" aria-hidden="true">Vezi serviciul <span>↗</span></span>
         </NuxtLink>
-        <div class="row__body">
-          <h2><NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink></h2>
-          <p>{{ s.summary }}</p>
-          <ul class="row__topics">
-            <li v-for="sec in s.sections.slice(0, 4)" :key="sec.title">{{ sec.title }}</li>
-          </ul>
-        </div>
-        <div class="row__cta">
-          <NuxtLink :to="serviceUrl(s.slug)" class="btn btn--outline btn--sm">Detalii</NuxtLink>
-          <NuxtLink :to="`/contact/?serviciu=${s.slug}#oferta`" class="btn btn--primary btn--sm">Cere o ofertă</NuxtLink>
-        </div>
       </li>
     </ul>
 
@@ -83,7 +82,11 @@ usePageSeo({
   margin: 0;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
 }
+
+.row:focus-visible { outline: 3px solid var(--svc-d); outline-offset: -3px; }
 
 .row__img {
   display: block;
@@ -115,17 +118,13 @@ usePageSeo({
   margin-bottom: 4px;
 }
 
-.row__body h2 a {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.row__body h2 a:hover {
+.row:hover h2 {
   text-decoration: underline;
-  text-decoration-color: var(--amber);
+  text-decoration-color: var(--svc-d);
 }
 
-.row__body p {
+.row__summary {
+  display: block;
   color: var(--ink-2);
   margin-bottom: 6px;
 }
@@ -134,18 +133,15 @@ usePageSeo({
   display: flex;
   flex-wrap: wrap;
   gap: 4px 14px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   font-size: 0.85rem;
   color: var(--ink-2);
 }
 
-.row__topics li {
-  margin: 0;
+.row__topics span {
+  display: inline;
 }
 
-.row__topics li + li::before {
+.row__topics span + span::before {
   content: '·';
   margin-right: 14px;
   color: var(--amber);
@@ -153,10 +149,14 @@ usePageSeo({
 }
 
 .row__cta {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--svc-d);
+  font-weight: 700;
+  white-space: nowrap;
 }
+.row__cta span { font-size: 1.5rem; }
 
 .steps-title {
   margin-bottom: 22px;
@@ -169,7 +169,6 @@ usePageSeo({
 
   .row__cta {
     grid-column: 2;
-    flex-direction: row;
   }
 }
 
@@ -183,9 +182,6 @@ usePageSeo({
     grid-column: auto;
   }
 
-  .row__cta .btn {
-    flex: 1;
-  }
 }
 
 /* Culoare (docs/design/culoare.md) */
@@ -194,6 +190,5 @@ usePageSeo({
 .row:hover { background: var(--svc-t); border-left-color: var(--svc-d); }
 .row__ph { background: var(--svc-m); }
 .row__ph span { border-color: var(--svc-d); }
-.row__body h2 a:hover { text-decoration-color: var(--svc-d); }
-.row__topics li + li::before { color: var(--svc-d); }
+.row__topics span + span::before { color: var(--svc-d); }
 </style>
