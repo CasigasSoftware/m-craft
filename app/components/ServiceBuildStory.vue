@@ -85,14 +85,14 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
 </template>
 
 <style scoped>
-.build-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#111612}
+.build-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#f2eee5}
 .build-bg__scene{position:absolute;top:0;right:0;width:min(62vw,720px);aspect-ratio:1;overflow:hidden}
 .build-bg__layer{position:absolute;inset:0;background-size:300% 200%;background-repeat:no-repeat;will-change:clip-path,opacity}
-.build-bg__shade{position:absolute;inset:0;background:linear-gradient(90deg,#101613 8%,#101613ec 31%,#10161345 68%,#10161308 100%),linear-gradient(0deg,#101613 0%,transparent 28%)}
+.build-bg__shade{position:absolute;inset:0;background:linear-gradient(90deg,#f2eee5 8%,#f2eee5f2 31%,#f2eee550 68%,#f2eee508 100%),linear-gradient(0deg,#f2eee5 0%,transparent 28%)}
 .build-bg__controls{position:absolute;right:max(24px,calc((100vw - 1200px)/2));bottom:24px;display:flex;align-items:center;gap:16px;color:#fff;pointer-events:auto;background:#0b110dcc;border:1px solid #ffffff35;border-radius:100px;padding:8px 11px 8px 17px;backdrop-filter:blur(8px)}
 .build-bg__current{display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:12px}.build-bg__current span{color:#e6ad57;font-size:10px;letter-spacing:.1em}.build-bg__current strong{font-weight:600}
 .build-bg nav{display:flex;gap:5px}.build-bg nav button{width:18px;height:26px;padding:0;border:0;background:transparent;cursor:pointer}.build-bg nav button span{display:block;height:3px;background:#ffffff80;border-radius:10px}.build-bg nav button.active span{background:#e6ad57}
 .build-bg__play{width:31px;height:31px;flex:none;border:1px solid #e6ad57;border-radius:50%;background:#e6ad57;color:#101613;cursor:pointer;font-size:13px}
-@media(max-width:860px){.build-bg__scene{width:100%;max-width:580px;left:50%;right:auto;transform:translateX(-50%)}.build-bg__shade{background:linear-gradient(0deg,#111612 12%,#111612bb 42%,transparent 76%)}.build-bg__controls{top:min(100vw,580px);bottom:auto;right:16px;transform:translateY(-100%);gap:9px}.build-bg__current{font-size:10px}.build-bg nav button{width:11px}}
+@media(max-width:860px){.build-bg__scene{width:100%;max-width:580px;left:50%;right:auto;transform:translateX(-50%)}.build-bg__shade{background:linear-gradient(0deg,#f2eee5 12%,#f2eee5bb 42%,transparent 76%)}.build-bg__controls{top:min(100vw,580px);bottom:auto;right:16px;transform:translateY(-100%);gap:9px}.build-bg__current{font-size:10px}.build-bg nav button{width:11px}}
 @media(max-width:420px){.build-bg__controls{right:10px;padding:6px 8px 6px 11px}.build-bg__current{gap:5px}.build-bg nav{gap:3px}}
 </style>

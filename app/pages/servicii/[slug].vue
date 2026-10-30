@@ -188,15 +188,15 @@ if (siteUrl) {
   position: relative;
   min-height: 690px;
   padding-block: 22px 110px;
-  background: #111612;
-  color: #fff;
+  background: #f2eee5;
+  color: #1b241d;
 }
 
 .intro__content { position: relative; z-index: 1; }
-.intro__eyebrow { color: #e6ad57; font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 30px 0 14px; }
-.intro__concept-note { color: #c8cdc7; font-size: 11px; margin: 24px 0 0; }
-.intro :deep(.crumbs), .intro :deep(.crumbs a) { color: #e4e5de; }
-.intro :deep(.crumbs [aria-current]) { color: #fff; }
+.intro__eyebrow { color: #99601b; font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 30px 0 14px; }
+.intro__concept-note { color: #59645c; font-size: 11px; margin: 24px 0 0; }
+.intro :deep(.crumbs), .intro :deep(.crumbs a) { color: #4b574e; }
+.intro :deep(.crumbs [aria-current]) { color: #1b241d; }
 
 .intro__grid {
   max-width: 590px;
@@ -204,13 +204,12 @@ if (siteUrl) {
 
 .intro__text h1 {
   margin-bottom: 10px;
-  color: #fff;
-  text-shadow: 0 2px 24px #0008;
+  color: #1b241d;
 }
 
 .intro__text .lead {
   margin-bottom: 12px;
-  color: #f1f1e9;
+  color: #3d4840;
 }
 
 .includes {
@@ -234,7 +233,7 @@ if (siteUrl) {
   width: 18px;
   height: 18px;
   align-self: center;
-  color: #e6ad57;
+  color: #a6691f;
 }
 
 .intro__area {
@@ -243,13 +242,13 @@ if (siteUrl) {
   gap: 6px;
   margin-top: 14px;
   font-size: 0.9rem;
-  color: #d9ddd5;
+  color: #48564b;
 }
 
 .intro__area svg {
   width: 16px;
   height: 16px;
-  color: #e6ad57;
+  color: #a6691f;
 }
 
 .proof {
