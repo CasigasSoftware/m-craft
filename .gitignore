@@ -5,6 +5,7 @@
 .nitro
 .cache
 dist
+.wrangler
 .vercel
 
 # Node

@@ -1,13 +1,14 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  // Site 100% static (generat de "nuxt generate" in dist/). Fara "main" =
-  // Worker doar cu assets statice, fara runtime server — echivalent cu Pages clasic.
-  // Prezenta acestui fisier opreste wrangler sa mai ruleze un al doilea build
-  // cu presetul lui propriu (cloudflare-module), care stricase deploy-ul anterior.
+  // Poarta temporara de mentenanta ruleaza inaintea oricarui asset static.
+  // Nu lasa rute sau fisiere accesibile fara autentificare.
   "name": "m-craft",
   "compatibility_date": "2026-10-23",
+  "main": "./worker/index.ts",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }
