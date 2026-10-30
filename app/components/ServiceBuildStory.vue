@@ -75,9 +75,9 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
     </div>
     <div class="build-bg__shade" aria-hidden="true" />
     <div class="build-bg__controls">
-      <div class="build-bg__current"><span>0{{ phase + 1 }} / 06</span><strong>{{ labels[phase] }}</strong></div>
+      <div class="build-bg__current"><strong>{{ labels[phase] }}</strong></div>
       <nav aria-label="Etapele animației">
-        <button v-for="(label, i) in labels" :key="i" type="button" :class="{ active: phase === i }" :aria-label="`Etapa ${i + 1}: ${label}`" @click="jump(i)"><span /></button>
+        <button v-for="(label, i) in labels" :key="i" type="button" :class="{ active: phase === i }" :aria-label="label" @click="jump(i)"><span /></button>
       </nav>
       <button type="button" class="build-bg__play" :aria-label="playing ? 'Pauză animație' : 'Pornește animația'" @click="toggle">{{ playing ? 'Ⅱ' : '▶' }}</button>
     </div>
@@ -90,7 +90,7 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
 .build-bg__layer{position:absolute;inset:0;background-size:300% 200%;background-repeat:no-repeat;will-change:clip-path,opacity}
 .build-bg__shade{position:absolute;inset:0;background:linear-gradient(90deg,#f2eee5 8%,#f2eee5f2 31%,#f2eee550 68%,#f2eee508 100%),linear-gradient(0deg,#f2eee5 0%,transparent 28%)}
 .build-bg__controls{position:absolute;right:max(24px,calc((100vw - 1200px)/2));bottom:24px;display:flex;align-items:center;gap:16px;color:#fff;pointer-events:auto;background:#0b110dcc;border:1px solid #ffffff35;border-radius:100px;padding:8px 11px 8px 17px;backdrop-filter:blur(8px)}
-.build-bg__current{display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:12px}.build-bg__current span{color:#e6ad57;font-size:10px;letter-spacing:.1em}.build-bg__current strong{font-weight:600}
+.build-bg__current{display:flex;align-items:center;white-space:nowrap;font-size:12px}.build-bg__current strong{font-weight:600}
 .build-bg nav{display:flex;gap:5px}.build-bg nav button{width:18px;height:26px;padding:0;border:0;background:transparent;cursor:pointer}.build-bg nav button span{display:block;height:3px;background:#ffffff80;border-radius:10px}.build-bg nav button.active span{background:#e6ad57}
 .build-bg__play{width:31px;height:31px;flex:none;border:1px solid #e6ad57;border-radius:50%;background:#e6ad57;color:#101613;cursor:pointer;font-size:13px}
 @media(max-width:860px){.build-bg__scene{width:100%;max-width:580px;left:50%;right:auto;transform:translateX(-50%)}.build-bg__shade{background:linear-gradient(0deg,#f2eee5 12%,#f2eee5bb 42%,transparent 76%)}.build-bg__controls{top:min(100vw,580px);bottom:auto;right:16px;transform:translateY(-100%);gap:9px}.build-bg__current{font-size:10px}.build-bg nav button{width:11px}}
