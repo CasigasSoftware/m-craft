@@ -58,8 +58,8 @@ try{if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','upda
       googleTagId: 'AW-18515496319',
       googleAdsConversions: {
         lead: 'AW-18515496319/36uzCMXbi54dEP-a8PxE', // formular trimis cu succes
-        call: 'AW-18515496319/pO5FCMLbi54dEP-a8PxE', // click pe telefon
-        whatsapp: '', // nu există încă o conversie WhatsApp în cont
+        call: 'AW-18515496319/VAQwCK3ria8dEP-a8PxE', // clic pe telefonul de pe site (conversie secundară)
+        whatsapp: 'AW-18515496319/6vgwCKrria8dEP-a8PxE', // clic pe WhatsApp (conversie secundară)
       },
       conversionValue: 1.0,
       conversionCurrency: 'RON',
