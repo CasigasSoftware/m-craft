@@ -12,7 +12,7 @@ const service = getService(slug)
 if (!service) throw createError({ statusCode: 404, statusMessage: 'Serviciul nu există', fatal: true })
 
 const { cover, gallery } = servicePhotos(slug)
-const proof = gallery.filter((p) => p.id !== cover?.id).slice(0, 4)
+const proof = [cover, ...gallery.filter((p) => p.id !== cover?.id)].filter((p) => !!p).slice(0, 4)
 const includes = service.options.slice(0, 5).map((o) => o.title)
 const related = service.related.map(getService).filter((s) => !!s)
 const projects = media.projects.filter((p) => p.services.includes(slug))
@@ -50,10 +50,12 @@ if (siteUrl) {
   <div v-if="service" :data-svc="slug">
     <!-- Sus: ce facem, unde, cum ne contactați -->
     <section class="intro">
-      <div class="wrap">
+      <ServiceBuildStory :service="service" />
+      <div class="wrap intro__content">
         <Breadcrumbs :items="[{ name: 'Servicii', path: '/servicii/' }, { name: service.name }]" />
-        <div class="intro__grid" :class="{ 'intro__grid--nophoto': !cover && slug !== 'mobila' }">
+        <div class="intro__grid">
           <div class="intro__text">
+            <p class="intro__eyebrow">M—CRAFT / DE LA SCHIȚĂ LA REALITATE</p>
             <h1>{{ service.h1 }}</h1>
             <p class="lead">{{ service.summary }}</p>
             <ul class="includes" aria-label="Ce include">
@@ -62,19 +64,10 @@ if (siteUrl) {
             <ContactActions :service="slug" :whatsapp-text="service.whatsappText" quote-href="#oferta" />
             <p class="intro__area"><AppIcon name="pin" />Lucrăm în județul Suceava, Iași și București · sediul în Vicov de Sus</p>
           </div>
-          <figure v-if="cover" class="intro__photo">
-            <Pic :photo="cover" priority sizes="(max-width: 860px) 100vw, 40vw" ratio="4 / 3" />
-            <figcaption>{{ cover.alt }}</figcaption>
-          </figure>
-          <figure v-else-if="slug === 'mobila'" class="intro__photo">
-            <div class="intro__concept concept-cover" role="img" aria-label="Vizualizare de concept: mobilier de living finalizat" />
-            <figcaption>Vizualizare de concept · mobilier la comandă</figcaption>
-          </figure>
         </div>
+        <p class="intro__concept-note">Vizualizare de concept · animația ilustrează etapele, nu o lucrare reală.</p>
       </div>
     </section>
-
-    <ServiceBuildStory :service="service" />
 
     <!-- Dovada: fotografii reale, înaintea explicațiilor -->
     <section v-if="proof.length" class="section proof">
@@ -192,28 +185,32 @@ if (siteUrl) {
 
 <style scoped>
 .intro {
-  padding-block: 20px 28px;
-  background: var(--svc-t);
+  position: relative;
+  min-height: 690px;
+  padding-block: 22px 110px;
+  background: #111612;
+  color: #fff;
 }
+
+.intro__content { position: relative; z-index: 1; }
+.intro__eyebrow { color: #e6ad57; font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 30px 0 14px; }
+.intro__concept-note { color: #c8cdc7; font-size: 11px; margin: 24px 0 0; }
+.intro :deep(.crumbs), .intro :deep(.crumbs a) { color: #e4e5de; }
+.intro :deep(.crumbs [aria-current]) { color: #fff; }
 
 .intro__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 28px;
-  align-items: center;
-}
-
-.intro__grid--nophoto {
-  grid-template-columns: minmax(0, 1fr);
-  max-width: 820px;
+  max-width: 590px;
 }
 
 .intro__text h1 {
   margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 2px 24px #0008;
 }
 
 .intro__text .lead {
   margin-bottom: 12px;
+  color: #f1f1e9;
 }
 
 .includes {
@@ -237,7 +234,7 @@ if (siteUrl) {
   width: 18px;
   height: 18px;
   align-self: center;
-  color: var(--svc-d);
+  color: #e6ad57;
 }
 
 .intro__area {
@@ -246,34 +243,13 @@ if (siteUrl) {
   gap: 6px;
   margin-top: 14px;
   font-size: 0.9rem;
-  color: var(--ink-2);
+  color: #d9ddd5;
 }
 
 .intro__area svg {
   width: 16px;
   height: 16px;
-  color: var(--svc-d);
-}
-
-.intro__photo {
-  margin: 0;
-}
-
-.intro__concept {
-  aspect-ratio: 4 / 3;
-  border-bottom: 6px solid var(--svc-d);
-  border-radius: var(--r-lg) var(--r-lg) var(--r-sm) var(--r-sm);
-}
-
-.intro__photo :deep(img) {
-  border-bottom: 6px solid var(--svc-d);
-  border-radius: var(--r-lg) var(--r-lg) var(--r-sm) var(--r-sm);
-}
-
-.intro__photo figcaption {
-  font-size: 0.85rem;
-  color: var(--ink-2);
-  margin-top: 6px;
+  color: #e6ad57;
 }
 
 .proof {
@@ -445,6 +421,8 @@ if (siteUrl) {
 }
 
 @media (max-width: 860px) {
+  .intro { padding-top: calc(min(100vw, 580px) + 24px); padding-bottom: 36px; min-height: 0; }
+  .intro__eyebrow { margin-top: 18px; }
   .intro__grid,
   .quote {
     grid-template-columns: 1fr;
