@@ -9,7 +9,7 @@ const service: Service = {
   seoDescription:
     'Termoizolarea fațadei cu sistem compozit: straturile sistemului, detalii la ferestre, colțuri și soclu, reparații de fațadă și acte pentru case și blocuri.',
   intro:
-    'O fațadă termoizolată este un sistem în care fiecare strat are un rol: adezivul, plăcile izolante, diblurile, masa de șpaclu armată, amorsa și tencuiala decorativă. Rezultatul depinde la fel de mult de detaliile de la ferestre, colțuri și soclu ca de grosimea izolației. Lucrăm pentru proprietari de case și de clădiri mici din județul Suceava.',
+    'O fațadă termoizolată este un sistem în care fiecare strat are un rol: adezivul, plăcile izolante, diblurile, masa de șpaclu armată, amorsa și tencuiala decorativă. Rezultatul depinde la fel de mult de detaliile de la ferestre, colțuri și soclu ca de grosimea izolației. Lucrăm pentru proprietari de case și de clădiri mici din județul Suceava, Iași și București.',
   summary:
     'Termoizolarea fațadei cu polistiren sau vată minerală, detalii la goluri și soclu, reparații de fațadă.',
   sections: [

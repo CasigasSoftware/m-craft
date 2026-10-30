@@ -5,7 +5,7 @@ const service: Service = {
   name: 'Gresie, faianță și parchet',
   shortName: 'Gresie, faianță, parchet',
   h1: 'Montaj gresie, faianță și parchet',
-  seoTitle: 'Montaj gresie, faianță și parchet în județul Suceava',
+  seoTitle: 'Montaj gresie, faianță și parchet în județul Suceava, Iași și București',
   seoDescription:
     'Pardoseli din gresie și parchet laminat, stratificat sau masiv, plus placări cu faianță și gresie pe pereții din băi și bucătării, cu hidroizolație la duș.',
   intro:
@@ -137,6 +137,8 @@ const service: Service = {
     'pardoseli',
     'adeziv gresie',
     'Suceava',
+    'Iași',
+    'București',
   ],
 }
 

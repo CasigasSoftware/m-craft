@@ -5,7 +5,7 @@ const service: Service = {
   name: 'Șape autonivelante',
   shortName: 'Șape autonivelante',
   h1: 'Șape autonivelante pentru pardoseli interioare',
-  seoTitle: 'Șape autonivelante pentru interior în județul Suceava',
+  seoTitle: 'Șape autonivelante pentru interior în județul Suceava, Iași și București',
   seoDescription:
     'Șapă autonivelantă sub parchet, gresie sau PVC: pregătirea suportului, amorsă, grosimi, timp de uscare și verificarea umidității și a planeității.',
   intro:
@@ -126,6 +126,8 @@ const service: Service = {
     'planeitate',
     'încălzire în pardoseală',
     'Suceava',
+    'Iași',
+    'București',
   ],
 }
 

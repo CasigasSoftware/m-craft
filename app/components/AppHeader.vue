@@ -72,7 +72,7 @@ function submitSearch() {
       <div class="wrap util__in">
         <span class="util__area">
           <AppIcon name="pin" />
-          Vicov de Sus · lucrări în județul Suceava
+          Lucrăm în Suceava · Iași · București
         </span>
         <nav class="util__links" aria-label="Linkuri secundare">
           <NuxtLink to="/video/">Video</NuxtLink>

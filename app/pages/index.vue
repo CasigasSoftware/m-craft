@@ -16,9 +16,9 @@ const { track } = useTracking()
 const recentOpen = ref<number | null>(null)
 
 usePageSeo({
-  title: 'M-CRAFT – renovări și amenajări în Vicov de Sus și județul Suceava',
+  title: 'M-CRAFT – renovări și amenajări în Suceava, Iași și București',
   rawTitle: true,
-  description: 'Renovări interioare, gips-carton, glet, gresie și faianță, instalații și izolații pentru case, apartamente și spații comerciale din județul Suceava.',
+  description: 'Renovări, amenajări și mobilă pentru case, apartamente și spații comerciale din județul Suceava, Iași și București.',
   image: hero[0],
 })
 </script>
@@ -29,11 +29,11 @@ usePageSeo({
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__text on-amber">
-          <span class="kicker">Vicov de Sus · județul Suceava</span>
-          <h1>Renovări și amenajări în Suceava.</h1>
+          <span class="kicker">Suceava · Iași · București</span>
+          <h1>Renovări și amenajări în Suceava, Iași și București.</h1>
           <p class="lead">
             Pereți și tavane din gips-carton, glet și zugrăveli, gresie și faianță, instalații pentru băi și bucătării.
-            Lucrăm în case, apartamente și spații comerciale mici din județ.
+            Lucrăm în case, apartamente și spații comerciale mici. Realizăm și mobilă adaptată spațiului.
           </p>
           <div class="hero__cta">
             <NuxtLink to="/contact/#oferta" class="btn btn--primary">Cere o ofertă</NuxtLink>
@@ -65,6 +65,7 @@ usePageSeo({
         <div class="svc-grid">
           <NuxtLink v-for="s in cards" :key="s.slug" v-reveal :to="serviceUrl(s.slug)" class="svc-card" :data-svc="s.slug">
             <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 640px) 50vw, 25vw" ratio="3 / 2" alt="" />
+            <div v-else-if="s.slug === 'mobila'" class="svc-card__concept concept-cover" aria-hidden="true" />
             <div v-else class="svc-card__ph" aria-hidden="true"><span /></div>
             <div class="svc-card__body">
               <h3>{{ s.name }}</h3>
@@ -82,13 +83,13 @@ usePageSeo({
           <h2>M-CRAFT, din Vicov de Sus</h2>
           <p>
             Firmă de construcții și renovări din Vicov de Sus. Lucrăm în case, apartamente și spații comerciale mici:
-            compartimentări și tavane din gips-carton, finisaje, placări și instalații. Fotografiile de pe site sunt din lucrările noastre.
+            compartimentări și tavane din gips-carton, finisaje, placări și instalații. Fotografiile din portofoliu sunt din lucrările noastre.
           </p>
           <div class="area band band--left">
             <h3>Unde lucrăm</h3>
             <p>
-              În județul Suceava, cu sediul în Vicov de Sus. Pentru o lucrare în altă localitate din județ, spuneți-ne unde este
-              și despre ce lucrare e vorba.
+              În județul Suceava, Iași și București, cu sediul în Vicov de Sus. Spuneți-ne unde este lucrarea
+              și despre ce este vorba.
             </p>
           </div>
           <NuxtLink to="/despre-noi/" class="more-link">Despre noi →</NuxtLink>
@@ -291,8 +292,11 @@ usePageSeo({
   text-decoration-color: var(--amber);
 }
 
-.svc-card__ph {
+.svc-card__concept, .svc-card__ph {
   aspect-ratio: 3 / 2;
+}
+
+.svc-card__ph {
   background: var(--concrete);
   display: grid;
   place-items: center;

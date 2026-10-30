@@ -8,7 +8,7 @@ const pics = photos(['s5-2926', 's6-3109', 's3-2630', 's1-2434', 's8-3298', 's2-
 
 usePageSeo({
   title: 'Despre M-CRAFT, firmă de renovări din Vicov de Sus',
-  description: 'M-CRAFT este o firmă de construcții și renovări din Vicov de Sus, județul Suceava. Lucrăm pentru case, apartamente și spații comerciale mici.',
+  description: 'M-CRAFT este o firmă de construcții și renovări din Vicov de Sus. Lucrăm în județul Suceava, Iași și București.',
   image: photo('s5-2926'),
 })
 </script>
@@ -22,7 +22,7 @@ usePageSeo({
           <h1>Despre M-CRAFT</h1>
           <p class="lead">
             M-CRAFT este o firmă de construcții și renovări cu sediul în Vicov de Sus, județul Suceava.
-            Lucrăm la amenajări interioare și exterioare, finisaje, placări și instalații, pentru clienți din județ.
+            Lucrăm la amenajări interioare și exterioare, mobilă, finisaje, placări și instalații în județul Suceava, Iași și București.
           </p>
           <p>
             Pe site am pus fotografii din lucrările noastre așa cum au fost făcute pe șantier, în timpul execuției.
@@ -41,7 +41,7 @@ usePageSeo({
           </div>
           <div>
             <dt>Zona în care lucrăm</dt>
-            <dd>Județul Suceava</dd>
+            <dd>Județul Suceava, Iași și București</dd>
           </div>
           <div>
             <dt>Contact</dt>
@@ -114,7 +114,7 @@ usePageSeo({
     <section class="section">
       <div class="wrap cta on-amber">
         <div>
-          <h2>Aveți o lucrare în județul Suceava?</h2>
+          <h2>Aveți o lucrare în Suceava, Iași sau București?</h2>
           <p class="muted">Spuneți-ne ce și unde. Vă răspundem cu întrebările necesare pentru ofertă.</p>
         </div>
         <ContactActions />

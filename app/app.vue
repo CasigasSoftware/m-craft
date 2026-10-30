@@ -25,7 +25,7 @@ const org = {
     postalCode: company.address.postalCode,
     addressCountry: company.address.country,
   },
-  areaServed: { '@type': 'AdministrativeArea', name: 'Județul Suceava' },
+  areaServed: ['Județul Suceava', 'Iași', 'București'].map((name) => ({ '@type': 'AdministrativeArea', name })),
   description: company.tagline,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -38,7 +38,7 @@ const org = {
 }
 
 useHead({
-  titleTemplate: (t) => t || `${company.brand} – renovări și amenajări în Suceava`,
+  titleTemplate: (t) => t || `${company.brand} – renovări și amenajări în Suceava, Iași și București`,
   script: [{ type: 'application/ld+json', key: 'ld-org', innerHTML: JSON.stringify(org) }],
 })
 </script>

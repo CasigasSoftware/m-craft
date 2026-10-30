@@ -5,11 +5,11 @@ const service: Service = {
   name: 'Amenajări și renovări interioare',
   shortName: 'Amenajări interioare',
   h1: 'Amenajări și renovări interioare pentru apartamente și case',
-  seoTitle: 'Amenajări și renovări interioare în județul Suceava',
+  seoTitle: 'Amenajări și renovări interioare în județul Suceava, Iași și București',
   seoDescription:
     'Renovare completă sau parțială de apartamente și case: compartimentări și tavane din gips-carton, glet, zugrăveli și ordinea corectă a lucrărilor.',
   intro:
-    'O renovare interioară poate însemna o singură cameră reîmprospătată sau o locuință refăcută de la pereți la finisaje. Lucrările cuprind de obicei compartimentări și tavane din gips-carton, glet, zugrăveli și finisaje, făcute într-o ordine care ține cont de instalații. Lucrăm pentru proprietari de apartamente și case din județul Suceava.',
+    'O renovare interioară poate însemna o singură cameră reîmprospătată sau o locuință refăcută de la pereți la finisaje. Lucrările cuprind de obicei compartimentări și tavane din gips-carton, glet, zugrăveli și finisaje, făcute într-o ordine care ține cont de instalații. Lucrăm pentru proprietari de apartamente și case din județul Suceava, Iași și București.',
   summary:
     'Renovare completă sau parțială: gips-carton, glet, zugrăveli și finisaje, în ordinea potrivită față de instalații.',
   sections: [
@@ -148,6 +148,8 @@ const service: Service = {
     'vopsea lavabilă',
     'renovare completă',
     'Suceava',
+    'Iași',
+    'București',
   ],
 }
 

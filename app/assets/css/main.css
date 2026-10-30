@@ -410,12 +410,17 @@ button {
 
 /* Codul de culoare al serviciilor: orice element cu data-svc primește --svc-d/-m/-t. */
 [data-svc='interioare'] { --svc-d: var(--verde-d); --svc-m: var(--verde-m); --svc-t: var(--verde-t); }
+[data-svc='mobila'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
 [data-svc='pardoseli-placari'] { --svc-d: var(--faianta-d); --svc-m: var(--faianta-m); --svc-t: var(--faianta-t); }
 [data-svc='sape-autonivelante'] { --svc-d: var(--beton-d); --svc-m: var(--beton-m); --svc-t: var(--beton-t); }
 [data-svc='instalatii-sanitare'] { --svc-d: var(--teava-d); --svc-m: var(--teava-m); --svc-t: var(--teava-t); }
 [data-svc='exterioare'] { --svc-d: var(--teracota-d); --svc-m: var(--teracota-m); --svc-t: var(--teracota-t); }
 [data-svc='fatade'] { --svc-d: var(--xps-d); --svc-m: var(--xps-m); --svc-t: var(--xps-t); }
 [data-svc='mentenanta'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
+
+.concept-cover {
+  background: url('/demo/services/mobila.webp') 100% 100% / 300% 200% no-repeat;
+}
 
 /* Secțiuni colorate pe toată lățimea */
 .section--verde { background: var(--verde-t); }

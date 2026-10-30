@@ -4,12 +4,14 @@ import exterioare from './exterioare'
 import fatade from './fatade'
 import instalatiiSanitare from './instalatii-sanitare'
 import mentenanta from './mentenanta'
+import mobila from './mobila'
 import pardoseliPlacari from './pardoseli-placari'
 import sapeAutonivelante from './sape-autonivelante'
 
 /** Ordinea din meniu, carusel și pagina Servicii */
 export const services: Service[] = [
   interioare,
+  mobila,
   pardoseliPlacari,
   sapeAutonivelante,
   instalatiiSanitare,

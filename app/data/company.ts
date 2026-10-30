@@ -22,9 +22,9 @@ export const company = {
     number: '40757211551',
   },
   email: 'mcraftconstruct@gmail.com',
-  area: 'județul Suceava',
+  area: 'județul Suceava, Iași și București',
   /** Prezentare scurtă, folosită în footer și meta */
-  tagline: 'Renovări, amenajări interioare și exterioare, finisaje și instalații pentru case, apartamente și spații comerciale din județul Suceava.',
+  tagline: 'Renovări, mobilă și amenajări pentru case, apartamente și spații comerciale din județul Suceava, Iași și București.',
 } as const
 
 export const fullAddress = `${company.address.street}, ${company.address.locality}, ${company.address.county}, ${company.address.postalCode}`

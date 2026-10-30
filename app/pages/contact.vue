@@ -5,7 +5,7 @@ const { track } = useTracking()
 
 usePageSeo({
   title: 'Contact și cerere de ofertă',
-  description: 'Cereți o ofertă pentru renovări și amenajări în județul Suceava: telefon și WhatsApp +40 757 211 551, email mcraftconstruct@gmail.com sau formularul online.',
+  description: 'Cereți o ofertă pentru renovări, amenajări și mobilă în județul Suceava, Iași și București: telefon, WhatsApp, email sau formularul online.',
 })
 </script>
 
@@ -40,7 +40,7 @@ usePageSeo({
       <aside class="info">
         <section class="box band band--top">
           <h2>Zona în care lucrăm</h2>
-          <p>Lucrăm în județul Suceava. Sediul firmei este în Vicov de Sus.</p>
+          <p>Lucrăm în județul Suceava, Iași și București. Sediul firmei este în Vicov de Sus.</p>
         </section>
         <section class="box band band--top">
           <h2>Date firmă</h2>

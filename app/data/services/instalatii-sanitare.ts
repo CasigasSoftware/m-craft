@@ -7,9 +7,9 @@ const service: Service = {
   h1: 'Instalații sanitare la renovarea băii și a bucătăriei',
   seoTitle: 'Instalații sanitare la renovarea băii și bucătăriei',
   seoDescription:
-    'Trasee noi de apă și canalizare, rezervoare îngropate, obiecte sanitare suspendate, probă de presiune și hidroizolație la duș, la renovări din județul Suceava.',
+    'Trasee noi de apă și canalizare, rezervoare îngropate, obiecte sanitare suspendate, probă de presiune și hidroizolație la duș, la renovări din județul Suceava, Iași și București.',
   intro:
-    'La renovarea unei băi sau a unei bucătării, instalațiile sanitare se refac înainte ca pereții să fie închiși și placați. Asta înseamnă trasee de apă și de canalizare stabilite din timp, pante corecte la scurgeri și o probă de presiune făcută cât conductele încă se văd. Lucrăm pentru proprietari de apartamente și case din județul Suceava. Pagina se referă la apă și canalizare, nu la instalații de gaze.',
+    'La renovarea unei băi sau a unei bucătării, instalațiile sanitare se refac înainte ca pereții să fie închiși și placați. Asta înseamnă trasee de apă și de canalizare stabilite din timp, pante corecte la scurgeri și o probă de presiune făcută cât conductele încă se văd. Lucrăm pentru proprietari de apartamente și case din județul Suceava, Iași și București. Pagina se referă la apă și canalizare, nu la instalații de gaze.',
   summary:
     'Trasee de apă și canalizare, rezervoare îngropate, obiecte suspendate și probe de presiune înainte de închiderea pereților.',
   sections: [

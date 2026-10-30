@@ -37,7 +37,7 @@ if (siteUrl) {
           serviceType: service.name,
           description: service.seoDescription,
           url: `${siteUrl}${serviceUrl(slug)}`,
-          areaServed: { '@type': 'AdministrativeArea', name: 'Județul Suceava' },
+          areaServed: ['Județul Suceava', 'Iași', 'București'].map((name) => ({ '@type': 'AdministrativeArea', name })),
           provider: { '@id': `${siteUrl}/#firma` },
         }),
       },
@@ -52,7 +52,7 @@ if (siteUrl) {
     <section class="intro">
       <div class="wrap">
         <Breadcrumbs :items="[{ name: 'Servicii', path: '/servicii/' }, { name: service.name }]" />
-        <div class="intro__grid" :class="{ 'intro__grid--nophoto': !cover }">
+        <div class="intro__grid" :class="{ 'intro__grid--nophoto': !cover && slug !== 'mobila' }">
           <div class="intro__text">
             <h1>{{ service.h1 }}</h1>
             <p class="lead">{{ service.summary }}</p>
@@ -60,11 +60,15 @@ if (siteUrl) {
               <li v-for="item in includes" :key="item"><AppIcon name="check" />{{ item }}</li>
             </ul>
             <ContactActions :service="slug" :whatsapp-text="service.whatsappText" quote-href="#oferta" />
-            <p class="intro__area"><AppIcon name="pin" />Lucrări în județul Suceava · sediul în Vicov de Sus</p>
+            <p class="intro__area"><AppIcon name="pin" />Lucrăm în județul Suceava, Iași și București · sediul în Vicov de Sus</p>
           </div>
           <figure v-if="cover" class="intro__photo">
             <Pic :photo="cover" priority sizes="(max-width: 860px) 100vw, 40vw" ratio="4 / 3" />
             <figcaption>{{ cover.alt }}</figcaption>
+          </figure>
+          <figure v-else-if="slug === 'mobila'" class="intro__photo">
+            <div class="intro__concept concept-cover" role="img" aria-label="Vizualizare de concept: mobilier de living finalizat" />
+            <figcaption>Vizualizare de concept · mobilier la comandă</figcaption>
           </figure>
         </div>
       </div>
@@ -253,6 +257,12 @@ if (siteUrl) {
 
 .intro__photo {
   margin: 0;
+}
+
+.intro__concept {
+  aspect-ratio: 4 / 3;
+  border-bottom: 6px solid var(--svc-d);
+  border-radius: var(--r-lg) var(--r-lg) var(--r-sm) var(--r-sm);
 }
 
 .intro__photo :deep(img) {

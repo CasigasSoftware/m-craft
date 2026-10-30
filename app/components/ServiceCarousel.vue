@@ -84,6 +84,7 @@ onBeforeUnmount(stop)
       >
         <NuxtLink v-for="s in items" :key="s.slug" :to="serviceUrl(s.slug)" class="svc band band--left" :data-svc="s.slug">
           <Pic v-if="s.cover" :photo="s.cover" sizes="88px" ratio="1 / 1" alt="" class="svc__img" />
+          <span v-else-if="s.slug === 'mobila'" class="svc__img concept-cover" aria-hidden="true" />
           <svg v-else class="svc__img svc__img--none" viewBox="0 0 52 52" aria-hidden="true">
             <rect x="12" y="10" width="5" height="32" fill="var(--svc-d)" />
             <rect x="12" y="37" width="28" height="5" fill="var(--svc-d)" />

@@ -5,8 +5,8 @@ import { servicePhotos } from '~/data/media'
 const rows = services.map((s) => ({ ...s, cover: servicePhotos(s.slug).cover }))
 
 usePageSeo({
-  title: 'Servicii de renovare, amenajări și instalații în Suceava',
-  description: 'Amenajări interioare și exterioare, fațade, gresie, faianță și parchet, șape autonivelante, instalații sanitare și mentenanță în județul Suceava.',
+  title: 'Servicii de renovare și mobilă în Suceava, Iași și București',
+  description: 'Renovări, amenajări, mobilă la comandă, fațade, pardoseli și instalații sanitare în județul Suceava, Iași și București.',
   image: rows[0]?.cover,
 })
 </script>
@@ -18,7 +18,7 @@ usePageSeo({
     <header class="head">
       <h1>Servicii</h1>
       <p class="lead">
-        Lucrări de renovare și amenajare pentru case, apartamente și spații comerciale din județul Suceava.
+        Lucrări de renovare, amenajare și mobilă pentru case, apartamente și spații comerciale din județul Suceava, Iași și București.
         Alegeți serviciul pentru detalii despre lucrare, materiale, ce influențează oferta și întrebări frecvente.
       </p>
     </header>
@@ -27,6 +27,7 @@ usePageSeo({
       <li v-for="s in rows" :key="s.slug" v-reveal class="row" :data-svc="s.slug">
         <NuxtLink :to="serviceUrl(s.slug)" class="row__img" tabindex="-1" aria-hidden="true">
           <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 700px) 100vw, 260px" ratio="4 / 3" alt="" />
+          <span v-else-if="s.slug === 'mobila'" class="row__concept concept-cover" />
           <span v-else class="row__ph"><span /></span>
         </NuxtLink>
         <div class="row__body">
@@ -88,6 +89,11 @@ usePageSeo({
   display: block;
   overflow: hidden;
   border-radius: var(--r-md);
+}
+
+.row__concept, .row__ph {
+  display: block;
+  aspect-ratio: 4 / 3;
 }
 
 .row__ph {

@@ -7,9 +7,9 @@ const service: Service = {
   h1: 'Amenajări exterioare: terase, izolarea acoperișului, socluri și trotuare',
   seoTitle: 'Amenajări exterioare: terase, soclu, trotuar de gardă',
   seoDescription:
-    'Hidroizolarea și izolarea teraselor, izolarea podului sau a acoperișului, trotuare de gardă, scări exterioare, placări la soclu și glafuri, în județul Suceava.',
+    'Hidroizolarea și izolarea teraselor, izolarea podului sau a acoperișului, trotuare de gardă, scări exterioare, placări la soclu și glafuri, în județul Suceava, Iași și București.',
   intro:
-    'Apa, înghețul și pierderile de căldură afectează o casă mai ales prin părțile ei exterioare: terasa, acoperișul, soclul și zona de la baza pereților. Lucrările de pe această pagină privesc tocmai aceste zone, în afară de fațadă, care are o pagină separată. Lucrăm pentru proprietari de case și de mici spații comerciale din județul Suceava.',
+    'Apa, înghețul și pierderile de căldură afectează o casă mai ales prin părțile ei exterioare: terasa, acoperișul, soclul și zona de la baza pereților. Lucrările de pe această pagină privesc tocmai aceste zone, în afară de fațadă, care are o pagină separată. Lucrăm pentru proprietari de case și de mici spații comerciale din județul Suceava, Iași și București.',
   summary:
     'Terase și hidroizolația lor, izolarea podului sau a acoperișului, trotuare de gardă, scări exterioare, socluri și glafuri.',
   sections: [

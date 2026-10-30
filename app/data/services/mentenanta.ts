@@ -138,6 +138,8 @@ const service: Service = {
     'verificări periodice',
     'mici reparații',
     'Suceava',
+    'Iași',
+    'București',
   ],
 }
 

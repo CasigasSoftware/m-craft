@@ -13,6 +13,7 @@ const names = ['Schița', 'Șantierul', 'Structura', 'Execuția', 'Finisajele', 
 const labels = computed(() => {
   const variants: Record<string, string[]> = {
     interioare: ['Ideea', 'Spațiul brut', 'Instalațiile', 'Placarea', 'Finisajele', 'Amenajarea'],
+    mobila: ['Schița', 'Măsurătorile', 'Structura', 'Montajul', 'Detaliile', 'Mobilierul final'],
     'pardoseli-placari': ['Proiectul', 'Suportul', 'Pregătirea', 'Placarea', 'Rosturile', 'Amenajarea'],
     'sape-autonivelante': ['Proiectul', 'Suportul', 'Amorsarea', 'Turnarea', 'Uscarea', 'Pardoseala'],
     'instalatii-sanitare': ['Proiectul', 'Spațiul brut', 'Traseele', 'Închiderea', 'Placarea', 'Dotările'],
@@ -24,6 +25,7 @@ const labels = computed(() => {
 })
 const finalHeadline = computed(() => ({
   interioare: 'Un interior, complet transformat.',
+  mobila: 'Mobilier creat pentru spațiul tău.',
   'pardoseli-placari': 'Pardoseala care schimbă totul.',
   'sape-autonivelante': 'Baza perfectă pentru finisaj.',
   'instalatii-sanitare': 'Confort în fiecare detaliu.',
@@ -97,7 +99,7 @@ onBeforeUnmount(() => {
         <div class="build__actions"><button type="button" @click="toggle">{{ playing ? 'Ⅱ Pauză' : progress > .98 ? '▶ Reia animația' : '▶ Vezi animația' }}</button><span>DERULEAZĂ PENTRU A CONSTRUI ↓</span><NuxtLink to="#oferta">Cere o ofertă ↗</NuxtLink></div>
         <input type="range" min="0" max="1000" :value="Math.round(progress * 1000)" :style="{ '--value': `${progress * 100}%` }" :aria-label="`Progresul animației pentru ${service.name}`" @input="scrub" />
         <nav aria-label="Etapele animației"><button v-for="(label, i) in labels" :key="i" type="button" :class="{ active: phase === i }" @click="jump(i)"><small>0{{ i + 1 }}</small>{{ label }}</button></nav>
-        <p>Vizualizare de concept generată · fotografiile reale ale M-CRAFT sunt mai jos.</p>
+        <p>Vizualizare de concept generată · etapele ilustrate nu sunt fotografii ale unei lucrări reale.</p>
       </div>
     </div>
   </section>
