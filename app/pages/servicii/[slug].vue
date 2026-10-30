@@ -70,6 +70,8 @@ if (siteUrl) {
       </div>
     </section>
 
+    <ServiceBuildStory :service="service" />
+
     <!-- Dovada: fotografii reale, înaintea explicațiilor -->
     <section v-if="proof.length" class="section proof">
       <div class="wrap">
