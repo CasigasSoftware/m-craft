@@ -149,7 +149,7 @@ async function submit() {
     <div ref="resultBox" aria-live="polite">
       <p v-if="status === 'sent'" class="qf__msg qf__msg--ok band band--left">
         <AppIcon name="check" />
-        Mulțumim! Cererea a fost trimisă. Vă contactăm la telefonul sau emailul lăsat, ca să stabilim detaliile pentru ofertă.
+        Mulțumim! Serviciul de trimitere a acceptat cererea. Dacă nu primiți răspuns, ne puteți contacta direct prin telefon sau WhatsApp.
       </p>
       <div v-else-if="status === 'error'" class="qf__msg qf__msg--err band band--left">
         <p>
