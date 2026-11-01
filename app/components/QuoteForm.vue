@@ -30,6 +30,19 @@ onMounted(() => phoneInput.value?.setCustomValidity(contactMissing.value ? 'Comp
 
 const serviceName = computed(() => services.find((s) => s.slug === form.service)?.name ?? (form.service === 'alta' ? 'Altă lucrare' : ''))
 const waText = computed(() => services.find((s) => s.slug === form.service)?.whatsappText ?? defaultWhatsappText)
+const mailHref = computed(() => {
+  const subject = `Cerere de ofertă${serviceName.value ? `: ${serviceName.value}` : ''} – site M-CRAFT`
+  const body = [
+    `Nume: ${form.name}`,
+    `Localitatea lucrării: ${form.locality}`,
+    `Telefon: ${form.phone || '-'}`,
+    `Email: ${form.email || '-'}`,
+    `Serviciu: ${serviceName.value || '-'}`,
+    `Mesaj: ${form.message || '-'}`,
+    `Pagina: ${route.path}`,
+  ].join('\n')
+  return `mailto:${company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+})
 
 // Paginile sunt generate static, deci ?serviciu= din adresă se citește abia în browser.
 onMounted(() => {
@@ -39,6 +52,10 @@ onMounted(() => {
 
 async function submit() {
   if (status.value === 'sending') return
+  if (!web3formsKey) {
+    window.location.href = mailHref.value
+    return
+  }
   status.value = 'sending'
   errorText.value = ''
   try {
@@ -67,7 +84,9 @@ async function submit() {
     Object.assign(form, { name: '', email: '', phone: '', locality: '', message: '' })
   } catch (e) {
     // datele completate rămân în formular
-    errorText.value = e instanceof Error ? e.message : ''
+    errorText.value = e instanceof Error && /Invalid Form ID\/Access Key/i.test(e.message)
+      ? 'Serviciul de trimitere este temporar indisponibil.'
+      : 'Serviciul de trimitere a întâmpinat o eroare.'
     status.value = 'error'
   }
   await nextTick()
@@ -116,13 +135,16 @@ async function submit() {
 
     <div class="qf__submit">
       <button type="submit" class="btn btn--primary" :disabled="status === 'sending'">
-        {{ status === 'sending' ? 'Se trimite…' : 'Trimite cererea de ofertă' }}
+        {{ status === 'sending' ? 'Se trimite…' : web3formsKey ? 'Trimite cererea de ofertă' : 'Deschide cererea în email' }}
       </button>
       <p class="qf__privacy">
         Folosim datele doar pentru a vă răspunde la această cerere. Detalii în
         <NuxtLink to="/politica-de-confidentialitate/">Politica de confidențialitate</NuxtLink>.
       </p>
     </div>
+    <p v-if="!web3formsKey" class="qf__either">
+      Trimiterea directă este temporar indisponibilă. Butonul deschide aplicația de email cu cererea completată; trimiteți mesajul de acolo către {{ company.email }}.
+    </p>
 
     <div ref="resultBox" aria-live="polite">
       <p v-if="status === 'sent'" class="qf__msg qf__msg--ok band band--left">
@@ -135,6 +157,7 @@ async function submit() {
           puteți încerca din nou sau ne puteți contacta direct:
         </p>
         <div class="qf__alt">
+          <a :href="mailHref" class="btn btn--outline btn--sm">Email: {{ company.email }}</a>
           <a :href="company.phone.href" class="btn btn--outline btn--sm" @click="track('call')"><AppIcon name="phone" />{{ company.phone.display }}</a>
           <a :href="whatsappUrl(waText)" class="btn btn--wa btn--sm" target="_blank" rel="noopener" @click="track('whatsapp')"><AppIcon name="whatsapp" />WhatsApp</a>
         </div>

@@ -39,7 +39,7 @@ Configurații importante:
 | Fotografii, clipuri, proiecte, ce poză apare la fiecare serviciu | `scripts/media/selection.json`, apoi regenerare (mai jos) |
 | Măsurare Google Ads (tag `AW-18515496319`, conversii, mod de consimțământ) | `nuxt.config.ts` → `runtimeConfig.public` |
 | Logo-uri și iconuri | `public/brand/`, `public/favicon*`, `public/icon-*.png` |
-| Cheia Web3Forms a formularului | `nuxt.config.ts` → `runtimeConfig.public.web3formsKey` |
+| Cheia Web3Forms a formularului | Variabila de build `NUXT_PUBLIC_WEB3FORMS_KEY` (cheia verificată pentru `mcraftconstruct@gmail.com`); fără ea, cererea se deschide în aplicația de email |
 
 ## Fotografii și clipuri
 
