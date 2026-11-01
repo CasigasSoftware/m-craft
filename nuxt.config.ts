@@ -52,8 +52,8 @@ try{if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','upda
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://m-craft.ro',
       // Ciornele (articole draft, note „De validat”) apar doar în preview, la `nuxt dev` sau cu SHOW_DRAFTS=1.
       showDrafts: isPreviewBuild || process.env.SHOW_DRAFTS === '1' || process.env.NODE_ENV === 'development',
-      // Cheia veche este respinsă de Web3Forms. Fără o cheie validă, formularul oferă trimitere prin aplicația de email.
-      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY?.trim() || '',
+      // Cheia Web3Forms este publică; variabila de build permite înlocuirea ei fără schimbări în cod.
+      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY?.trim() || '8c92af7c-63cd-4931-b5b9-db2b95f0739a',
       // Google Ads (docs: Google_Ads_Tracking_M_Craft.docx). Gol = niciun script Google.
       googleTagId: 'AW-18515496319',
       googleAdsConversions: {
