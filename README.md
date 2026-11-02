@@ -37,7 +37,7 @@ Configurații importante:
 | Pagini legale | `app/data/legal/*.ts` |
 | Recenzii (doar reale, cu sursă) | `app/data/reviews.ts` |
 | Fotografii, clipuri, proiecte, ce poză apare la fiecare serviciu | `scripts/media/selection.json`, apoi regenerare (mai jos) |
-| Măsurare Google Ads (tag `AW-18515496319`, conversii, mod de consimțământ) | `nuxt.config.ts` → `runtimeConfig.public` |
+| Măsurare Google Ads și GA4 (taguri `AW-18515496319` și `G-GFPK19FYLP`, conversii, mod de consimțământ) | `nuxt.config.ts` → `runtimeConfig.public` |
 | Logo-uri și iconuri | `public/brand/`, `public/favicon*`, `public/icon-*.png` |
 | Cheia Web3Forms a formularului | `nuxt.config.ts` → `runtimeConfig.public.web3formsKey`; se poate suprascrie prin variabila de build `NUXT_PUBLIC_WEB3FORMS_KEY`. Destinatarul este `mcraftconstruct@gmail.com`, verificat în Web3Forms. |
 

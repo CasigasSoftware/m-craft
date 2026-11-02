@@ -5,7 +5,7 @@ const doc: LegalDoc = {
   title: 'Politica de cookie-uri',
   seoDescription:
     'Ce informații stochează acest website în browser, când se încarcă tagul Google și harta Google Maps și cum vă schimbați sau ștergeți alegerea privind cookie-urile.',
-  updated: '2026-10-23',
+  updated: '2026-11-02',
   body: [
     {
       type: 'p',
@@ -37,7 +37,7 @@ const doc: LegalDoc = {
     { type: 'h2', text: 'Cookie-urile Google, plasate doar după „Accept”' },
     {
       type: 'p',
-      text: 'Folosim Google Ads pentru reclame. Dacă apăsați „Accept”, website-ul încarcă tagul Google, iar acesta poate plasa cookie-uri care arată dacă o vizită sau un contact a pornit de la o reclamă. Măsurăm doar trei acțiuni: trimiterea cu succes a unei cereri de ofertă, click pe numărul de telefon și click pe linkul WhatsApp. Către Google nu trimitem datele completate în formular (nume, email, telefon, localitate, mesaj).',
+      text: 'Folosim Google Analytics 4 pentru statistici privind utilizarea website-ului și Google Ads pentru măsurarea reclamelor. Dacă apăsați „Accept”, website-ul încarcă tagul Google. Acesta măsoară paginile vizitate și poate arăta dacă o vizită sau un contact a pornit de la o reclamă. Măsurăm și trimiterea cu succes a unei cereri de ofertă, clickul pe numărul de telefon și clickul pe linkul WhatsApp. Către Google nu trimitem datele completate în formular (nume, email, telefon, localitate, mesaj).',
     },
     {
       type: 'p',
@@ -48,16 +48,14 @@ const doc: LegalDoc = {
       items: [
         '_gcl_au (Google Ads): leagă vizitele de reclamele afișate, pentru măsurarea conversiilor; durată: 90 de zile.',
         '_gcl_aw și _gcl_gs (Google Ads): păstrează informații despre click-ul pe o reclamă, când ajungeți pe website dintr-o reclamă; durată: 90 de zile.',
+        '_ga (Google Analytics 4): deosebește vizitatorii pentru realizarea statisticilor; durată: 2 ani.',
+        '_ga_GFPK19FYLP (Google Analytics 4): păstrează starea sesiunii; durată: 2 ani.',
         'cookie-uri pe domenii Google, de exemplu IDE (doubleclick.net, publicitate și măsurare; 13 luni în SEE și Regatul Unit) sau test_cookie (verifică dacă browserul acceptă cookie-uri; 15 minute).',
       ],
     },
     {
       type: 'p',
       text: 'Lista exactă și duratele pot varia în funcție de setările Google și de modul în care ați ajuns pe website. Informațiile actualizate sunt publicate de Google la https://business.safety.google/adscookies/. Prelucrarea datelor de către Google este descrisă la https://policies.google.com/privacy.',
-    },
-    {
-      type: 'note',
-      text: 'De validat de firmă: dacă se folosește și Google Analytics 4, adăugați aici cookie-urile _ga (deosebește vizitatorii; 2 ani) și _ga_<ID> (păstrează starea sesiunii; 2 ani) și mențiunea că statisticile se activează tot doar după „Accept”. Dacă nu se folosește GA4, ștergeți această notă.',
     },
     {
       type: 'p',

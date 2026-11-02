@@ -27,7 +27,7 @@ function save() {
     <section v-if="bannerOpen && !settingsOpen" class="cc band band--top" aria-label="Cookie-uri" role="region">
       <div class="wrap cc__in">
         <p class="cc__text">
-          Folosim cookie-uri Google doar dacă sunteți de acord, ca să măsurăm dacă reclamele noastre aduc cereri de ofertă.
+          Folosim cookie-uri Google doar dacă sunteți de acord, pentru statistici despre utilizarea site-ului și măsurarea cererilor venite din reclame.
           Site-ul și contactarea noastră funcționează la fel și dacă refuzați.
           <NuxtLink to="/politica-cookie/">Politica de cookie-uri</NuxtLink>
         </p>
@@ -52,7 +52,7 @@ function save() {
         <div class="opt">
           <div>
             <h3><label for="cc-measure">Măsurare și publicitate (Google)</label></h3>
-            <p>Ne arată dacă vizitatorii veniți din reclamele Google trimit o cerere, sună sau scriu pe WhatsApp. Nu se transmit numele, telefonul sau mesajul dumneavoastră.</p>
+            <p>Ne oferă statistici despre paginile vizitate și arată dacă reclamele Google generează cereri, apeluri sau mesaje WhatsApp. Nu se transmit numele, telefonul sau mesajul dumneavoastră.</p>
           </div>
           <input id="cc-measure" v-model="measure" type="checkbox" class="switch">
         </div>

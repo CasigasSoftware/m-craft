@@ -77,16 +77,18 @@ let tagLoaded = false
 
 /** Încarcă Google tag dacă există un ID: în modul „basic” doar după acord, în „advanced” mereu (cu consimțământ refuzat implicit). */
 export function loadGoogleTag() {
-  const { googleTagId, consentMode } = useRuntimeConfig().public
+  const { googleTagId, googleAnalyticsId, consentMode } = useRuntimeConfig().public
   if (tagLoaded || (consentMode !== 'advanced' && readChoice() !== 'accepted')) return
-  if (!googleTagId) return
+  const loaderId = googleTagId || googleAnalyticsId
+  if (!loaderId) return
   tagLoaded = true
   const s = document.createElement('script')
   s.async = true
-  s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleTagId)}`
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(loaderId)}`
   document.head.appendChild(s)
   window.gtag('js', new Date())
-  window.gtag('config', googleTagId)
+  if (googleTagId) window.gtag('config', googleTagId)
+  if (googleAnalyticsId) window.gtag('config', googleAnalyticsId)
 }
 
 export function isTagActive() {

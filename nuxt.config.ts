@@ -56,6 +56,8 @@ try{if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','upda
       web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY?.trim() || '8c92af7c-63cd-4931-b5b9-db2b95f0739a',
       // Google Ads (docs: Google_Ads_Tracking_M_Craft.docx). Gol = niciun script Google.
       googleTagId: 'AW-18515496319',
+      // Google Analytics 4. Foloseste acelasi Google tag si aceeasi alegere de consimtamant.
+      googleAnalyticsId: 'G-GFPK19FYLP',
       googleAdsConversions: {
         lead: 'AW-18515496319/36uzCMXbi54dEP-a8PxE', // formular trimis cu succes
         call: 'AW-18515496319/VAQwCK3ria8dEP-a8PxE', // clic pe telefonul de pe site (conversie secundară)

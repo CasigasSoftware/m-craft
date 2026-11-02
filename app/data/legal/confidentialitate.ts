@@ -5,7 +5,7 @@ const doc: LegalDoc = {
   title: 'Politica de confidențialitate',
   seoDescription:
     'Ce date personale prelucrează M-CRAFT prin acest website, în ce scop, cui le transmite, cât timp le păstrează și ce drepturi aveți conform GDPR.',
-  updated: '2026-10-23',
+  updated: '2026-11-02',
   body: [
     {
       type: 'p',
@@ -53,10 +53,10 @@ const doc: LegalDoc = {
       type: 'p',
       text: 'Ca la orice website, serverele care livrează paginile primesc automat date tehnice: adresa IP, tipul browserului și al dispozitivului, pagina accesată, data și ora cererii. Acestea apar în jurnalele tehnice (logurile) ale serviciului de găzduire.',
     },
-    { type: 'h3', text: 'Alegerea privind cookie-urile și măsurarea reclamelor' },
+    { type: 'h3', text: 'Alegerea privind cookie-urile, statisticile și măsurarea reclamelor' },
     {
       type: 'p',
-      text: 'Alegerea pe care o faceți în bannerul de cookie-uri este salvată în browserul dumneavoastră. Doar dacă apăsați „Accept”, website-ul încarcă tagul Google, care măsoară dacă reclamele noastre Google Ads au adus vizitatori și contacte. Detaliile sunt în Politica de cookie-uri.',
+      text: 'Alegerea pe care o faceți în bannerul de cookie-uri este salvată în browserul dumneavoastră. Doar dacă apăsați „Accept”, website-ul încarcă tagul Google. Google Analytics 4 furnizează statistici despre paginile vizitate și interacțiunea cu website-ul, iar Google Ads măsoară dacă reclamele au adus vizitatori și contacte. Detaliile sunt în Politica de cookie-uri.',
     },
     {
       type: 'p',
@@ -72,7 +72,7 @@ const doc: LegalDoc = {
       type: 'ul',
       items: [
         'Răspunsul la cererea de ofertă și pregătirea ofertei, prin formular, telefon sau WhatsApp: demersuri făcute la cererea dumneavoastră înainte de încheierea unui contract (art. 6 alin. (1) lit. b GDPR).',
-        'Măsurarea eficienței reclamelor cu ajutorul cookie-urilor Google: consimțământul dumneavoastră, dat prin butonul „Accept” (art. 6 alin. (1) lit. a GDPR și art. 4 din Legea nr. 506/2004). Vă puteți retrage oricând consimțământul, fără a afecta prelucrarea făcută înainte de retragere.',
+        'Realizarea statisticilor de utilizare și măsurarea eficienței reclamelor cu ajutorul Google Analytics 4 și Google Ads: consimțământul dumneavoastră, dat prin butonul „Accept” (art. 6 alin. (1) lit. a GDPR și art. 4 din Legea nr. 506/2004). Vă puteți retrage oricând consimțământul, fără a afecta prelucrarea făcută înainte de retragere.',
         'Afișarea hărții Google Maps: acțiunea dumneavoastră de a apăsa „Afișează harta”, după ce ați fost informat că harta este încărcată de la Google (art. 6 alin. (1) lit. a GDPR).',
         'Funcționarea, securitatea și prevenirea abuzurilor (jurnale tehnice ale serverului, protecția anti-spam a formularului, salvarea alegerii privind cookie-urile): interesul nostru legitim de a avea un website sigur și funcțional (art. 6 alin. (1) lit. f GDPR).',
         'Dacă cererea devine contract: executarea contractului (art. 6 alin. (1) lit. b GDPR) și respectarea obligațiilor legale, de exemplu cele financiar-contabile (art. 6 alin. (1) lit. c GDPR).',
@@ -94,14 +94,10 @@ const doc: LegalDoc = {
       items: [
         'Web3Forms (operat de Web3Creative, India): primește datele din formular, le verifică împotriva spamului și le trimite pe adresa de email a firmei. Acționează ca persoană împuternicită, pe baza acordului său de prelucrare a datelor. Folosește la rândul său subcontractanți pentru infrastructură (de exemplu Amazon Web Services, Cloudflare, Hetzner) și pentru filtrarea spamului (CleanTalk și Akismet, care pot primi adresa IP și adresa de email a celui care trimite formularul).',
         'Cloudflare, Inc. (SUA), prin serviciul Cloudflare Pages: găzduiește website-ul și îl livrează prin rețeaua sa, prelucrând date tehnice ale cererilor (de exemplu adresa IP) pentru livrare și securitate. Acționează ca persoană împuternicită.',
-        'Google: furnizorul căsuței de email în care primim cererile (Gmail). După „Accept”, și furnizorul serviciului Google Ads de măsurare a conversiilor, pentru care Google acționează ca operator independent. După click pe „Afișează harta”, și furnizorul hărții Google Maps. Pentru utilizatorii din Spațiul Economic European, serviciile Google sunt oferite de Google Ireland Limited.',
+        'Google: furnizorul căsuței de email în care primim cererile (Gmail). După „Accept”, Google furnizează statisticile Google Analytics 4 și măsurarea conversiilor Google Ads. Pentru Analytics, Google prelucrează datele conform condițiilor sale privind protecția datelor, iar pentru serviciile de publicitate acționează și ca operator independent. După click pe „Afișează harta”, Google furnizează și harta Google Maps. Pentru utilizatorii din Spațiul Economic European, serviciile Google sunt oferite de Google Ireland Limited.',
         'WhatsApp Ireland Limited (grupul Meta) și operatorul dumneavoastră de telefonie: pentru conversațiile pe care le inițiați prin aceste canale, conform propriilor politici.',
         'Autorități publice, instanțe sau consultanți (de exemplu contabil sau avocat): doar când legea o cere sau când este necesar pentru apărarea unui drept.',
       ],
-    },
-    {
-      type: 'note',
-      text: 'De validat de firmă: dacă se folosește și Google Analytics 4, adăugați Google ca persoană împuternicită pentru statistici (GA4 este acoperit de condițiile Google privind prelucrarea datelor). Dacă nu se folosește, păstrați textul de mai sus. Verificați și dacă emailul firmei rămâne o adresă Gmail personală sau trece pe un cont Google Workspace (în al doilea caz, Google devine persoană împuternicită, cu acord de prelucrare).',
     },
 
     { type: 'h2', text: 'Transferuri în afara Spațiului Economic European' },
