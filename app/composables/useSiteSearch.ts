@@ -59,7 +59,7 @@ function buildIndex(showDrafts: boolean): SearchDoc[] {
   }
   docs.push(
     { type: 'Pagină', title: 'Contact și cerere de ofertă', url: '/contact/', keywords: ['contact', 'ofertă', 'telefon', 'whatsapp', 'email', 'adresă'], content: 'Telefon, WhatsApp, email, formular de cerere de ofertă, date firmă, hartă, zona deservită: județul Suceava.' },
-    { type: 'Pagină', title: 'Despre M-CRAFT', url: '/despre-noi/', keywords: ['despre', 'firmă', 'Vicov de Sus'], content: 'Firmă de construcții și renovări din Vicov de Sus, județul Suceava. Case, apartamente, spații comerciale mici.' },
+    { type: 'Pagină', title: 'Despre M-CRAFT', url: '/despre-noi/', keywords: ['despre', 'firmă', 'Vicov de Sus'], content: 'Firmă de construcții și renovări din Vicov de Sus, județul Suceava. Case, apartamente, spații comerciale.' },
     { type: 'Pagină', title: 'Video', url: '/video/', keywords: ['video', 'clipuri', 'filmări'], content: media.videos.map((v) => v.title).join(' ') },
   )
   return docs

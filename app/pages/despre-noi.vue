@@ -60,7 +60,7 @@ usePageSeo({
           <ul class="who">
             <li><strong>Proprietari de apartamente</strong> care renovează una sau mai multe încăperi, baia ori bucătăria.</li>
             <li><strong>Proprietari de case</strong>, de la casa nouă care are nevoie de compartimentări, tavane și finisaje, până la renovarea unei case vechi.</li>
-            <li><strong>Spații comerciale mici</strong>: magazine, birouri sau săli care trebuie compartimentate și finisate.</li>
+            <li><strong>Spații comerciale</strong>: magazine, birouri sau săli care trebuie compartimentate și finisate.</li>
           </ul>
         </div>
         <div>

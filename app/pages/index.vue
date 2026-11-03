@@ -88,7 +88,7 @@ usePageSeo({
         <div v-reveal class="about__text">
           <h2>M-CRAFT, din Vicov de Sus</h2>
           <p>
-            Firmă de construcții și renovări din Vicov de Sus. Lucrăm în case, apartamente și spații comerciale mici:
+            Firmă de construcții și renovări din Vicov de Sus. Lucrăm în case, apartamente și spații comerciale:
             compartimentări și tavane din gips-carton, finisaje, placări și instalații. Fotografiile din portofoliu sunt din lucrările noastre.
           </p>
           <div class="area band band--left">
