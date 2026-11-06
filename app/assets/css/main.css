@@ -418,8 +418,17 @@ button {
 [data-svc='fatade'] { --svc-d: var(--xps-d); --svc-m: var(--xps-m); --svc-t: var(--xps-t); }
 [data-svc='mentenanta'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
 
+[data-svc='interioare'] { --concept-image: url('/demo/services/interioare.webp'); }
+[data-svc='mobila'] { --concept-image: url('/demo/services/mobila.webp'); }
+[data-svc='pardoseli-placari'] { --concept-image: url('/demo/services/pardoseli-placari.webp'); }
+[data-svc='sape-autonivelante'] { --concept-image: url('/demo/services/sape-autonivelante.webp'); }
+[data-svc='instalatii-sanitare'] { --concept-image: url('/demo/services/instalatii-sanitare.webp'); }
+[data-svc='exterioare'] { --concept-image: url('/demo/services/exterioare.webp'); }
+[data-svc='fatade'] { --concept-image: url('/demo/services/fatade.webp'); }
+[data-svc='mentenanta'] { --concept-image: url('/demo/services/mentenanta.webp'); }
+
 .concept-cover {
-  background: url('/demo/services/mobila.webp') 100% 100% / 300% 200% no-repeat;
+  background: var(--concept-image) 100% 100% / 300% 200% no-repeat;
 }
 
 /* Secțiuni colorate pe toată lățimea */

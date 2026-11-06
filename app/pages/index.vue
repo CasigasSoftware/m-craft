@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { company, whatsappUrl, defaultWhatsappText } from '~/data/company'
 import { services, serviceUrl } from '~/data/services'
-import { media, photo, photos, servicePhotos } from '~/data/media'
+import { media, photos } from '~/data/media'
 import { reviews } from '~/data/reviews'
 
 const hero = photos(media.home.hero)
@@ -11,7 +11,6 @@ const homeVideos = media.home.videos.map((id) => media.videos.find((v) => v.id =
 const projectTitle = (id: string) => media.projects.find((p) => p.id === id)?.title ?? ''
 const projectSvc = (id: string) => media.projects.find((p) => p.id === id)?.services[0]
 
-const cards = services.map((s) => ({ ...s, cover: servicePhotos(s.slug).cover }))
 const { track } = useTracking()
 const recentOpen = ref<number | null>(null)
 
@@ -64,15 +63,13 @@ usePageSeo({
         <div class="section-head">
           <div>
             <h2>Servicii</h2>
-            <p>Fiecare serviciu are o pagină cu detalii despre lucrare, ce influențează oferta și întrebări frecvente.</p>
+            <p>De la spațiul brut la rezultatul final. Imaginile sunt ilustrative; fotografiile lucrărilor noastre sunt în <NuxtLink to="/proiecte/">portofoliu</NuxtLink>.</p>
           </div>
           <NuxtLink to="/servicii/" class="more-link">Toate serviciile →</NuxtLink>
         </div>
         <div class="svc-grid">
-          <NuxtLink v-for="s in cards" :key="s.slug" v-reveal :to="serviceUrl(s.slug)" class="svc-card" :data-svc="s.slug">
-            <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 640px) 50vw, 25vw" ratio="3 / 2" alt="" />
-            <div v-else-if="s.slug === 'mobila'" class="svc-card__concept concept-cover" aria-hidden="true" />
-            <div v-else class="svc-card__ph" aria-hidden="true"><span /></div>
+          <NuxtLink v-for="s in services" :key="s.slug" v-reveal :to="serviceUrl(s.slug)" class="svc-card" :data-svc="s.slug">
+            <div class="svc-card__concept concept-cover" aria-hidden="true" />
             <div class="svc-card__body">
               <h3>{{ s.name }}</h3>
               <p>{{ s.summary }}</p>
@@ -298,21 +295,8 @@ usePageSeo({
   text-decoration-color: var(--amber);
 }
 
-.svc-card__concept, .svc-card__ph {
+.svc-card__concept {
   aspect-ratio: 3 / 2;
-}
-
-.svc-card__ph {
-  background: var(--concrete);
-  display: grid;
-  place-items: center;
-}
-
-.svc-card__ph span {
-  width: 52px;
-  height: 52px;
-  border-left: 7px solid var(--amber);
-  border-bottom: 7px solid var(--amber);
 }
 
 .svc-card__body {
@@ -485,6 +469,10 @@ usePageSeo({
 }
 
 @media (max-width: 560px) {
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+
   .video-row {
     grid-template-columns: 1fr 1fr;
   }
@@ -515,8 +503,6 @@ usePageSeo({
 .svc-card > :first-child { border-bottom: 5px solid var(--svc-d); }
 .svc-card:hover { border-color: var(--svc-d); }
 .svc-card:hover h3 { text-decoration-color: var(--svc-d); }
-.svc-card__ph { background: var(--svc-m); }
-.svc-card__ph span { border-color: var(--svc-d); }
 
 .area { background: var(--paper); --band: var(--verde-d); }
 .recent__cap { background: var(--svc-t); border-top: 4px solid var(--svc-d); }

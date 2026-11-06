@@ -2,12 +2,10 @@
 import { services, serviceUrl } from '~/data/services'
 import { servicePhotos } from '~/data/media'
 
-const rows = services.map((s) => ({ ...s, cover: servicePhotos(s.slug).cover }))
-
 usePageSeo({
   title: 'Servicii de renovare și mobilă în Suceava, Iași și București',
   description: 'Renovări, amenajări, mobilă la comandă, fațade, pardoseli și instalații sanitare în județul Suceava, Iași și București.',
-  image: rows[0]?.cover,
+  image: servicePhotos(services[0]!.slug).cover,
 })
 </script>
 
@@ -21,15 +19,14 @@ usePageSeo({
         Lucrări de renovare, amenajare și mobilă pentru case, apartamente și spații comerciale din județul Suceava, Iași și București.
         Alegeți serviciul pentru detalii despre lucrare, materiale, ce influențează oferta și întrebări frecvente.
       </p>
+      <p>Imaginile de mai jos ilustrează rezultatul posibil; fotografiile din lucrările noastre sunt în <NuxtLink to="/proiecte/">pagina Proiecte</NuxtLink>.</p>
     </header>
 
     <ul class="list">
-      <li v-for="s in rows" :key="s.slug" v-reveal :data-svc="s.slug">
+      <li v-for="s in services" :key="s.slug" v-reveal :data-svc="s.slug">
         <NuxtLink :to="serviceUrl(s.slug)" class="row">
           <span class="row__img" aria-hidden="true">
-            <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 700px) 100vw, 260px" ratio="4 / 3" alt="" />
-            <span v-else-if="s.slug === 'mobila'" class="row__concept concept-cover" />
-            <span v-else class="row__ph"><span /></span>
+            <span class="row__concept concept-cover" />
           </span>
           <div class="row__body">
             <h2>{{ s.name }}</h2>
@@ -94,23 +91,9 @@ usePageSeo({
   border-radius: var(--r-md);
 }
 
-.row__concept, .row__ph {
+.row__concept {
   display: block;
   aspect-ratio: 4 / 3;
-}
-
-.row__ph {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 3;
-  background: var(--concrete);
-}
-
-.row__ph span {
-  width: 44px;
-  height: 44px;
-  border-left: 6px solid var(--amber);
-  border-bottom: 6px solid var(--amber);
 }
 
 .row__body h2 {
@@ -188,7 +171,5 @@ usePageSeo({
 .list { border-top: 4px solid var(--amber); }
 .row { border-left: 6px solid var(--svc-m); padding-left: 14px; transition: background-color 0.15s ease; }
 .row:hover { background: var(--svc-t); border-left-color: var(--svc-d); }
-.row__ph { background: var(--svc-m); }
-.row__ph span { border-color: var(--svc-d); }
 .row__topics span + span::before { color: var(--svc-d); }
 </style>
