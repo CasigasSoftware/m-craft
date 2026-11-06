@@ -4,29 +4,37 @@ const service: Service = {
   slug: 'exterioare',
   name: 'Amenajări exterioare',
   shortName: 'Amenajări exterioare',
-  h1: 'Amenajări exterioare: terase, izolarea acoperișului, socluri și trotuare',
-  seoTitle: 'Amenajări exterioare: terase, soclu, trotuar de gardă',
+  h1: 'Amenajări exterioare: plăci cimentate, terase, socluri și trotuare',
+  seoTitle: 'Amenajări exterioare: plăci cimentate, terase și socluri',
   seoDescription:
-    'Hidroizolarea și izolarea teraselor, izolarea podului sau a acoperișului, trotuare de gardă, scări exterioare, placări la soclu și glafuri, în județul Suceava, Iași și București.',
+    'Placări exterioare cu plăci pe bază de ciment, hidroizolarea teraselor, izolarea podului, trotuare de gardă, scări și socluri în Suceava, Iași și București.',
   intro:
-    'Apa, înghețul și pierderile de căldură afectează o casă mai ales prin părțile ei exterioare: terasa, acoperișul, soclul și zona de la baza pereților. Lucrările de pe această pagină privesc tocmai aceste zone, în afară de fațadă, care are o pagină separată. Lucrăm pentru proprietari de case și de mici spații comerciale din județul Suceava, Iași și București.',
+    'Apa, înghețul și pierderile de căldură afectează o casă mai ales prin părțile ei exterioare: terasa, acoperișul, soclul și zona de la baza pereților. Realizăm și placări cu plăci pe bază de ciment, în alcătuiri potrivite pentru zona expusă. Termoizolarea clasică a fațadei are o pagină separată. Lucrăm pentru proprietari de case și de mici spații comerciale din județul Suceava, Iași și București.',
   summary:
-    'Terase și hidroizolația lor, izolarea podului sau a acoperișului, trotuare de gardă, scări exterioare, socluri și glafuri.',
+    'Plăci cimentate pentru exterior, terase și hidroizolații, izolarea podului, trotuare de gardă, scări, socluri și glafuri.',
   sections: [
     {
       title: 'Ce lucrări intră aici',
       paragraphs: [
         'Sunt lucrări la anvelopa clădirii și în jurul ei, care au în comun protecția împotriva apei și a frigului. Multe dintre ele se leagă între ele: un soclu bine izolat are nevoie de un trotuar care să îndepărteze apa, iar o terasă refăcută are nevoie de racorduri etanșe la pereți și la scurgeri.',
-        'Termoizolarea pereților cu sistem compozit și tencuiala decorativă a fațadei sunt tratate pe pagina de fațade. Aici intră lucrările din jurul lor.',
+        'Termoizolarea pereților cu sistem compozit și tencuiala decorativă sunt tratate pe pagina de fațade. Aici intră și placările exterioare cu plăci pe bază de ciment.',
       ],
       bullets: [
         'refacerea teraselor și a balcoanelor deschise, cu hidroizolație și pante spre scurgeri',
         'izolarea termică a planșeului de pod sau a acoperișului',
+        'placări exterioare cu plăci pe bază de ciment, pe substructură compatibilă',
         'trotuare de gardă în jurul casei',
         'scări exterioare și trepte de acces',
         'izolarea și placarea soclului',
         'glafuri la ferestre și copertine la atice sau parapete',
         'lucrări de construcții mici: reparații de zidărie, mici betonări, refaceri locale',
+      ],
+    },
+    {
+      title: 'Placări exterioare cu plăci cimentate',
+      paragraphs: [
+        'Plăcile pe bază de ciment pot fi folosite în anumite alcătuiri exterioare, de exemplu la pereți, zone acoperite sau elemente de fațadă. Alegerea produsului depinde de locul montajului și de expunerea la apă și vânt.',
+        'Pentru un rezultat durabil contează substructura, prinderile, rosturile, racordurile și finisajul compatibil. Aceste detalii se stabilesc după sistemul ales și condițiile lucrării. Imaginea de pe pagină este o vizualizare ilustrativă a etapei de montaj.',
       ],
     },
     {
@@ -63,6 +71,10 @@ const service: Service = {
   ],
   options: [
     {
+      title: 'Plăci cimentate pentru exterior',
+      text: 'Plăci pe bază de ciment montate pe substructură compatibilă, cu prinderi, rosturi și finisaj conform sistemului ales pentru locul lucrării.',
+    },
+    {
       title: 'Hidroizolații bituminoase',
       text: 'Membrane aplicate la cald sau autoadezive, folosite des la terase și la acoperișuri plate. Se protejează de obicei cu un strat peste ele, mai ales pe terasele circulabile.',
     },
@@ -88,6 +100,7 @@ const service: Service = {
     },
   ],
   quoteFactors: [
+    'suprafața placării cu plăci cimentate, substructura și detaliile de racord',
     'suprafața terasei, a acoperișului sau lungimea trotuarului și a soclului',
     'starea straturilor existente și dacă trebuie demolate până la suport',
     'numărul de racorduri, receptori, burlane și străpungeri',
@@ -97,6 +110,10 @@ const service: Service = {
     'perioada din an, pentru că multe materiale se aplică doar în anumite intervale de temperatură și pe vreme uscată',
   ],
   faq: [
+    {
+      q: 'Se pot monta plăci cimentate la exterior?',
+      a: 'Da, dacă produsul și întregul sistem sunt potrivite pentru zona respectivă. Verificăm expunerea la apă și vânt, suportul, prinderile, rosturile și finisajul înainte de a propune soluția.',
+    },
     {
       q: 'Terasa îmi plouă în casă. Se poate repara doar local?',
       a: 'Depinde de cauză. Dacă infiltrația vine de la un racord, de la un receptor sau de la o fisură izolată, o reparație locală poate fi suficientă. Dacă hidroizolația este îmbătrânită pe toată suprafața, reparațiile locale doar mută problema. Pentru o evaluare ne ajută fotografii cu terasa, cu tavanul de dedesubt și cu zona racordurilor.',
@@ -124,9 +141,11 @@ const service: Service = {
   ],
   related: ['fatade', 'pardoseli-placari', 'mentenanta', 'instalatii-sanitare'],
   whatsappText:
-    'Bună ziua! Mă interesează o ofertă pentru lucrări exterioare (terasă, soclu, trotuar sau izolarea podului). Lucrarea este în [localitate].',
+    'Bună ziua! Mă interesează o ofertă pentru lucrări exterioare (plăci cimentate, terasă, soclu, trotuar sau izolarea podului). Lucrarea este în [localitate].',
   keywords: [
     'amenajări exterioare',
+    'plăci cimentate exterior',
+    'montaj plăci cimentate',
     'hidroizolație terasă',
     'izolare terasă',
     'izolare pod',

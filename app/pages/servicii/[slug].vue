@@ -75,9 +75,10 @@ if (siteUrl) {
           <div class="result__image concept-cover" role="img" :aria-label="`Vizualizare de concept pentru ${service.name}`" />
         </div>
         <div class="result__copy">
-          <p class="result__eyebrow">DE LA SCHIȚĂ LA REZULTAT</p>
-          <h2 id="result-title">{{ service.name }}, pas cu pas</h2>
-          <p>De la primele etape ale lucrării până la finisajul final. Imaginea arată un rezultat posibil și completează animația de mai sus.</p>
+          <p class="result__eyebrow">{{ slug === 'exterioare' ? 'PLACĂRI CU PLĂCI CIMENTATE' : 'DE LA SCHIȚĂ LA REZULTAT' }}</p>
+          <h2 id="result-title">{{ slug === 'exterioare' ? 'Plăci cimentate pentru exterior' : `${service.name}, pas cu pas` }}</h2>
+          <p v-if="slug === 'exterioare'">Un exemplu vizual al etapei de montaj: plăcile, substructura și izolația înainte de finisaj. Realizăm astfel de placări în funcție de sistemul potrivit lucrării.</p>
+          <p v-else>De la primele etape ale lucrării până la finisajul final. Imaginea arată un rezultat posibil și completează animația de mai sus.</p>
           <p class="result__note">Vizualizare ilustrativă</p>
           <a v-if="proof.length" href="#lucrari" class="more-link">Vezi lucrările noastre reale →</a>
         </div>
