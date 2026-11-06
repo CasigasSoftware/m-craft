@@ -419,12 +419,12 @@ button {
 [data-svc='mentenanta'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
 
 [data-svc='interioare'] { --concept-image: url('/demo/services/interioare.webp'); }
-[data-svc='mobila'] { --concept-image: url('/demo/services/mobila.webp'); }
+[data-svc='mobila'] { --concept-image: url('/demo/services/mobila.webp'); --concept-ratio: 1; }
 [data-svc='pardoseli-placari'] { --concept-image: url('/demo/services/pardoseli-placari.webp'); }
 [data-svc='sape-autonivelante'] { --concept-image: url('/demo/services/sape-autonivelante.webp'); }
-[data-svc='instalatii-sanitare'] { --concept-image: url('/demo/services/instalatii-sanitare.webp'); }
+[data-svc='instalatii-sanitare'] { --concept-image: url('/demo/services/instalatii-sanitare.webp'); --concept-ratio: 1672 / 1411; }
 [data-svc='exterioare'] { --concept-image: url('/demo/services/exterioare.webp'); }
-[data-svc='fatade'] { --concept-image: url('/demo/services/fatade.webp'); }
+[data-svc='fatade'] { --concept-image: url('/demo/services/fatade.webp'); --concept-ratio: 1672 / 1411; }
 [data-svc='mentenanta'] { --concept-image: url('/demo/services/mentenanta.webp'); }
 
 .concept-cover {

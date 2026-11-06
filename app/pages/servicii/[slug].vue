@@ -69,8 +69,23 @@ if (siteUrl) {
       </div>
     </section>
 
+    <section class="result" aria-labelledby="result-title">
+      <div class="wrap result__grid">
+        <div class="result__visual">
+          <div class="result__image concept-cover" role="img" :aria-label="`Vizualizare de concept pentru ${service.name}`" />
+        </div>
+        <div class="result__copy">
+          <p class="result__eyebrow">DE LA SCHIȚĂ LA REZULTAT</p>
+          <h2 id="result-title">{{ service.name }}, pas cu pas</h2>
+          <p>De la primele etape ale lucrării până la finisajul final. Imaginea arată un rezultat posibil și completează animația de mai sus.</p>
+          <p class="result__note">Vizualizare ilustrativă</p>
+          <a v-if="proof.length" href="#lucrari" class="more-link">Vezi lucrările noastre reale →</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Dovada: fotografii reale, înaintea explicațiilor -->
-    <section v-if="proof.length" class="section proof">
+    <section v-if="proof.length" id="lucrari" class="section proof">
       <div class="wrap">
         <div class="section-head">
           <div>
@@ -251,6 +266,41 @@ if (siteUrl) {
   color: #a6691f;
 }
 
+.result {
+  padding-block: clamp(36px, 5vw, 72px);
+  background: var(--svc-t);
+}
+
+.result__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+.result__visual {
+  overflow: hidden;
+  border-radius: var(--r-md);
+  box-shadow: 0 20px 55px #19271b24;
+}
+
+.result__image {
+  aspect-ratio: var(--concept-ratio, 16 / 9);
+  background-color: #d8d0c3;
+}
+
+.result__eyebrow {
+  margin: 0 0 10px;
+  color: var(--svc-d);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.result__copy h2 { margin-bottom: 12px; }
+.result__copy > p:not(.result__eyebrow) { max-width: 42ch; }
+.result__note { font-size: .8rem; color: var(--ink-2); }
+
 .proof {
   padding-bottom: calc(var(--section) - 8px);
 }
@@ -423,6 +473,7 @@ if (siteUrl) {
   .intro { padding-top: calc(min(100vw, 580px) + 24px); padding-bottom: 36px; min-height: 0; }
   .intro__eyebrow { margin-top: 18px; }
   .intro__grid,
+  .result__grid,
   .quote {
     grid-template-columns: 1fr;
   }
