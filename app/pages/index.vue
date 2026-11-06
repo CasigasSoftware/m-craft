@@ -4,7 +4,6 @@ import { services, serviceUrl } from '~/data/services'
 import { media, photos } from '~/data/media'
 import { reviews } from '~/data/reviews'
 
-const hero = photos(media.home.hero)
 const recent = photos(media.home.recent)
 const about = photos(media.home.about)
 const homeVideos = media.home.videos.map((id) => media.videos.find((v) => v.id === id)).filter((v) => !!v)
@@ -18,13 +17,13 @@ usePageSeo({
   title: 'M-CRAFT – renovări și amenajări în Suceava, Iași și București',
   rawTitle: true,
   description: 'Renovări, amenajări și mobilă pentru case, apartamente și spații comerciale din județul Suceava, Iași și București.',
-  image: hero[0],
+  image: { src: '/hero/interioare-premium.webp', alt: 'Vizualizare ilustrativă a unui interior finisat' },
 })
 </script>
 
 <template>
   <div>
-    <!-- Primul ecran: mesaj clar, proiecte reale și acces direct la servicii -->
+    <!-- Primul ecran: mesaj clar, vizualizări de concept și acces direct la proiectele reale -->
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__text">
@@ -44,10 +43,10 @@ usePageSeo({
           </div>
         </div>
         <div class="hero__photos">
-          <Pic v-if="hero[0]" :photo="hero[0]" priority sizes="(max-width: 860px) 100vw, 40vw" ratio="4 / 5" class="hero__main" />
-          <Pic v-if="hero[1]" :photo="hero[1]" sizes="(max-width: 860px) 50vw, 20vw" ratio="4 / 5" class="hero__side" />
-          <Pic v-if="hero[2]" :photo="hero[2]" sizes="(max-width: 860px) 50vw, 20vw" ratio="4 / 5" class="hero__side" />
-          <div class="hero__photo-label">DIN LUCRĂRILE NOASTRE <span>↗</span></div>
+          <img src="/hero/interioare-premium.webp" alt="Vizualizare ilustrativă a unui living finisat" width="1122" height="1402" fetchpriority="high" class="hero__main" />
+          <img src="/hero/mobila-premium.webp" alt="Vizualizare ilustrativă a mobilierului realizat la comandă" width="1122" height="1402" class="hero__side" />
+          <img src="/hero/fatade-premium.webp" alt="Vizualizare ilustrativă a unei fațade finisate" width="1122" height="1402" class="hero__side" />
+          <div class="hero__photo-label">VIZUALIZĂRI ILUSTRATIVE</div>
         </div>
       </div>
       <div class="wrap hero__links" aria-label="Servicii populare">
@@ -265,6 +264,13 @@ usePageSeo({
   height: 100% !important;
   min-height: 0;
   border-radius: var(--r-lg);
+}
+
+.hero__main, .hero__side {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  object-fit: cover;
 }
 
 .svc-grid {

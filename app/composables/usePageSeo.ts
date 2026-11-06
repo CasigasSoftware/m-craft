@@ -4,8 +4,8 @@ import { photoSrc, type Photo } from '~/data/media'
 interface PageSeo {
   title: string
   description: string
-  /** fotografia pentru Open Graph */
-  image?: Photo
+  /** fotografia sau vizualizarea pentru Open Graph */
+  image?: Photo | { src: string; alt: string }
   noindex?: boolean
   /** titlul complet, fără sufixul „| M-CRAFT” */
   rawTitle?: boolean
@@ -19,7 +19,9 @@ export function usePageSeo(seo: PageSeo) {
   const fullTitle = seo.rawTitle ? seo.title : `${seo.title} | ${company.brand}`
   const path = route.path.endsWith('/') ? route.path : `${route.path}/`
   const canonical = abs(path)
-  const ogImage = seo.image ? abs(photoSrc(seo.image, seo.image.widths.at(-1)!)) : abs('/og-image.jpg')
+  const ogImage = seo.image
+    ? abs('src' in seo.image ? seo.image.src : photoSrc(seo.image, seo.image.widths.at(-1)!))
+    : abs('/og-image.jpg')
 
   useHead({
     title: fullTitle,
