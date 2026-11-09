@@ -19,7 +19,7 @@ const doc: LegalDoc = {
     },
     {
       type: 'p',
-      text: 'Pentru orice întrebare sau cerere privind datele dumneavoastră ne puteți scrie la mcraftconstruct@gmail.com, ne puteți suna la +40 757 211 551 sau ne puteți trimite o scrisoare la adresa sediului. Firma nu a desemnat un responsabil cu protecția datelor (DPO), deoarece activitatea ei nu impune acest lucru.',
+      text: 'Pentru orice întrebare sau cerere privind datele dumneavoastră ne puteți scrie la mcraftconstruct@gmail.com, ne puteți suna la +40 773 266 220 sau ne puteți trimite o scrisoare la adresa sediului. Firma nu a desemnat un responsabil cu protecția datelor (DPO), deoarece activitatea ei nu impune acest lucru.',
     },
     {
       type: 'note',

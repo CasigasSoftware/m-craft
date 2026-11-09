@@ -20,7 +20,7 @@ const doc: LegalDoc = {
     {
       type: 'ul',
       items: [
-        'Telefon și WhatsApp: +40 757 211 551',
+        'Telefon și WhatsApp: +40 773 266 220',
         'Email: mcraftconstruct@gmail.com',
       ],
     },
@@ -104,7 +104,7 @@ const doc: LegalDoc = {
     { type: 'h2', text: 'Reclamații și soluționarea alternativă a litigiilor' },
     {
       type: 'p',
-      text: 'Dacă aveți o nemulțumire legată de website sau de serviciile firmei, vă rugăm să ne scrieți mai întâi la mcraftconstruct@gmail.com sau să ne sunați la +40 757 211 551, ca să putem analiza situația și să încercăm să o rezolvăm direct.',
+      text: 'Dacă aveți o nemulțumire legată de website sau de serviciile firmei, vă rugăm să ne scrieți mai întâi la mcraftconstruct@gmail.com sau să ne sunați la +40 773 266 220, ca să putem analiza situația și să încercăm să o rezolvăm direct.',
     },
     {
       type: 'p',
@@ -130,7 +130,7 @@ const doc: LegalDoc = {
     { type: 'h2', text: 'Contact' },
     {
       type: 'p',
-      text: 'Pentru întrebări despre acești termeni: mcraftconstruct@gmail.com sau +40 757 211 551. Adresa de corespondență: Str. George Călinescu nr. 10, Vicov de Sus, jud. Suceava, cod 727610.',
+      text: 'Pentru întrebări despre acești termeni: mcraftconstruct@gmail.com sau +40 773 266 220. Adresa de corespondență: Str. George Călinescu nr. 10, Vicov de Sus, jud. Suceava, cod 727610.',
     },
   ],
 }

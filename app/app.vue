@@ -15,7 +15,7 @@ const org = {
   url: siteUrl || undefined,
   logo: siteUrl ? `${siteUrl}/brand/logo-schema.png` : undefined,
   image: siteUrl ? `${siteUrl}/og-image.jpg` : undefined,
-  telephone: '+40757211551',
+  telephone: company.phone.href.replace('tel:', ''),
   email: company.email,
   address: {
     '@type': 'PostalAddress',

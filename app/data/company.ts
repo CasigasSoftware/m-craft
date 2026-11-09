@@ -14,12 +14,12 @@ export const company = {
     country: 'RO',
   },
   phone: {
-    display: '+40 757 211 551',
-    href: 'tel:+40757211551',
+    display: '+40 773 266 220',
+    href: 'tel:+40773266220',
   },
   whatsapp: {
-    display: '+40 757 211 551',
-    number: '40757211551',
+    display: '+40 773 266 220',
+    number: '40773266220',
   },
   email: 'mcraftconstruct@gmail.com',
   area: 'județul Suceava, Iași și București',
