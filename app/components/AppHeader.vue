@@ -14,6 +14,7 @@ const dropdownRoot = ref<HTMLElement | null>(null)
 const nav = [
   { to: '/', label: 'Acasă' },
   { to: '/proiecte/', label: 'Proiecte' },
+  { to: '/recenzii/', label: 'Recenzii' },
   { to: '/despre-noi/', label: 'Despre noi' },
   { to: '/blog/', label: 'Blog' },
   { to: '/contact/', label: 'Contact' },
@@ -58,12 +59,6 @@ onBeforeUnmount(() => {
   document.removeEventListener('click', onDocClick)
   document.removeEventListener('keydown', onKey)
 })
-
-const searchQuery = ref('')
-function submitSearch() {
-  const q = searchQuery.value.trim()
-  navigateTo({ path: '/cautare/', query: q ? { q } : {} })
-}
 </script>
 
 <template>
@@ -76,7 +71,6 @@ function submitSearch() {
         </span>
         <nav class="util__links" aria-label="Linkuri secundare">
           <NuxtLink to="/video/">Video</NuxtLink>
-          <NuxtLink to="/recenzii/">Recenzii</NuxtLink>
           <a :href="`mailto:${company.email}`">{{ company.email }}</a>
           <a :href="whatsappUrl(defaultWhatsappText)" target="_blank" rel="noopener" @click="track('whatsapp')">WhatsApp</a>
         </nav>
@@ -132,12 +126,9 @@ function submitSearch() {
           </ul>
         </nav>
 
-        <form class="search" role="search" @submit.prevent="submitSearch">
-          <label for="hdr-search" class="visually-hidden">Caută pe site</label>
-          <input id="hdr-search" v-model="searchQuery" type="search" placeholder="Caută pe site" autocomplete="off">
-          <button type="submit" aria-label="Caută"><AppIcon name="search" /></button>
-        </form>
-
+        <NuxtLink to="/cautare/" class="icon-btn search-btn" aria-label="Caută pe site">
+          <AppIcon name="search" />
+        </NuxtLink>
         <NuxtLink to="/contact/#oferta" class="btn btn--outline btn--sm hdr-quote">Cere ofertă</NuxtLink>
         <a :href="company.phone.href" class="btn btn--primary btn--sm call" @click="track('call')">
           <AppIcon name="phone" />
@@ -185,7 +176,6 @@ function submitSearch() {
         </ul>
         <NuxtLink v-for="item in nav.slice(1)" :key="item.to" :to="item.to" class="mob__link">{{ item.label }}</NuxtLink>
         <NuxtLink to="/video/" class="mob__link mob__link--sec">Video</NuxtLink>
-        <NuxtLink to="/recenzii/" class="mob__link mob__link--sec">Recenzii</NuxtLink>
       </nav>
       <div class="mob__contact band band--top">
         <a :href="company.phone.href" class="btn btn--primary" @click="track('call')"><AppIcon name="phone" />{{ company.phone.display }}</a>
@@ -407,46 +397,6 @@ function submitSearch() {
   border: 0;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--line);
-  border-radius: var(--r-md);
-  background: var(--paper);
-  height: 38px;
-}
-
-.search input {
-  border: 0;
-  background: none;
-  width: 150px;
-  padding: 0 8px;
-  font: inherit;
-  font-size: 0.9rem;
-  color: var(--ink);
-}
-
-.search input:focus {
-  outline: none;
-}
-
-.search:focus-within {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
-}
-
-.search button {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border: 0;
-  border-radius: var(--r-sm);
-  background: none;
-  cursor: pointer;
-}
-
-.search svg,
 .icon-btn svg {
   width: 20px;
   height: 20px;
@@ -551,14 +501,46 @@ function submitSearch() {
   margin-top: 18px;
 }
 
-@media (max-width: 1180px) {
-  .search {
+.main-nav a,
+.bar__in .btn {
+  white-space: nowrap;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+}
+
+.logo,
+.search-btn,
+.bar__in .btn {
+  flex: none;
+}
+
+@media (max-width: 1000px) {
+  .bar__in {
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .call span {
     display: none;
+  }
+
+  .call {
+    width: 44px;
+    min-height: 44px;
+    padding: 0;
   }
 }
 
 @media (max-width: 980px) {
-  .util__links a:nth-child(3) {
+  .util__links a:nth-child(2) {
     display: none;
   }
 
@@ -576,7 +558,8 @@ function submitSearch() {
     display: none;
   }
 
-  .main-nav {
+  .main-nav,
+  .search-btn {
     display: none;
   }
 

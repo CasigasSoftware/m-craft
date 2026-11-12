@@ -39,6 +39,7 @@ usePageSeo({
           </div>
           <div class="hero__meta">
             <span><strong>{{ String(services.length).padStart(2, '0') }}</strong> servicii, un singur partener</span>
+            <NuxtLink v-if="reviews.length" to="/recenzii/" class="hero__reviews">Citește cele {{ reviews.length }} recenzii de pe Google →</NuxtLink>
             <a :href="whatsappUrl(defaultWhatsappText)" target="_blank" rel="noopener" @click="track('whatsapp')">Discută pe WhatsApp ↗</a>
           </div>
         </div>
@@ -75,6 +76,20 @@ usePageSeo({
             </div>
           </NuxtLink>
         </div>
+      </div>
+    </section>
+
+    <!-- Recenzii: doar dacă există recenzii reale -->
+    <section v-if="reviews.length" class="section section--teracota">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Ce spun clienții</h2>
+            <p>Recenzii reale lăsate de clienții noștri pe Google.</p>
+          </div>
+          <NuxtLink to="/recenzii/" class="more-link">Toate cele {{ reviews.length }} recenzii →</NuxtLink>
+        </div>
+        <ReviewList :reviews="reviews.slice(0, 3)" />
       </div>
     </section>
 
@@ -146,17 +161,6 @@ usePageSeo({
           <NuxtLink to="/video/" class="more-link">Toate clipurile →</NuxtLink>
         </div>
         <VideoCard v-for="v in homeVideos" :key="v!.id" :video="v!" />
-      </div>
-    </section>
-
-    <!-- Recenzii: doar dacă există recenzii reale -->
-    <section v-if="reviews.length" class="section section--teracota">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Recenzii</h2>
-          <NuxtLink to="/recenzii/" class="more-link">Toate recenziile →</NuxtLink>
-        </div>
-        <ReviewList :reviews="reviews.slice(0, 3)" />
       </div>
     </section>
 
