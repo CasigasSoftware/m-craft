@@ -15,6 +15,7 @@ export interface Review {
 const googleReviews = 'https://www.google.com/maps/place/?q=place_id:ChIJ-aSO0ck8aywRoXNtcoSsPng'
 
 export const reviews: Review[] = [
+  { author: 'Casian Gocan', text: 'Servicii de nota 10! Lucrarea de montaj rigips a fost executata impecabil si conform specificatiilor. Multumim!', source: 'Google', url: googleReviews, date: '2026-11', service: 'interioare' },
   { author: 'Bujdei Iulian', text: 'Preț bun și calitate superioară. Recomand cu încredere!!', source: 'Google', url: googleReviews, date: '2026-11' },
   { author: 'Maria Calancea', text: 'Recomand cu încredere! Super calitate!', source: 'Google', url: googleReviews, date: '2026-11' },
   { author: 'Sebastian Strugari', text: 'Super multumit!!', source: 'Google', url: googleReviews, date: '2026-11' },
