@@ -5,11 +5,11 @@ const doc: LegalDoc = {
   title: 'Politica de confidențialitate',
   seoDescription:
     'Ce date personale prelucrează M-CRAFT prin acest website, în ce scop, cui le transmite, cât timp le păstrează și ce drepturi aveți conform GDPR.',
-  updated: '2026-11-02',
+  updated: '2026-11-17',
   body: [
     {
       type: 'p',
-      text: 'Această politică explică ce date personale prelucrăm când folosiți acest website, ne trimiteți o cerere de ofertă sau ne contactați prin telefon ori WhatsApp. Ea se aplică în baza Regulamentului (UE) 2016/679 (Regulamentul general privind protecția datelor, „GDPR”) și a Legii nr. 190/2018.',
+      text: 'Această politică explică ce date personale prelucrăm când folosiți acest website, ne trimiteți o cerere de ofertă (pe website sau prin formularul din reclamele noastre Google) sau ne contactați prin telefon ori WhatsApp. Ea se aplică în baza Regulamentului (UE) 2016/679 (Regulamentul general privind protecția datelor, „GDPR”) și a Legii nr. 190/2018.',
     },
 
     { type: 'h2', text: 'Cine este operatorul datelor' },
@@ -43,6 +43,25 @@ const doc: LegalDoc = {
       type: 'p',
       text: 'Formularul nu conține bifă de marketing, iar datele trimise prin el nu sunt folosite pentru newslettere sau reclame. Vă rugăm să nu includeți în mesaj date care nu sunt necesare pentru ofertă, cum ar fi date despre sănătate, date din acte de identitate sau date bancare.',
     },
+    { type: 'h3', text: 'Cererea trimisă prin formularul din reclamele Google' },
+    {
+      type: 'p',
+      text: 'Unele reclame M-CRAFT din Căutarea Google au un formular de contact găzduit de Google. Dacă îl completați, primim:',
+    },
+    {
+      type: 'ul',
+      items: [
+        'numele;',
+        'numărul de telefon;',
+        'localitatea;',
+        'adresa de email, dacă alegeți să o completați;',
+        'tipul de lucrare ales din listă.',
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Dacă sunteți conectat la contul Google, Google poate precompleta unele câmpuri din datele contului, iar dumneavoastră le puteți modifica înainte de trimitere. Datele ajung în contul Google Ads al firmei și primim o notificare pe email. Le folosim doar ca să vă contactăm în legătură cu cererea și ca să vă facem o ofertă, nu pentru newslettere sau alte reclame.',
+    },
     { type: 'h3', text: 'Apelurile telefonice și mesajele WhatsApp' },
     {
       type: 'p',
@@ -71,7 +90,7 @@ const doc: LegalDoc = {
     {
       type: 'ul',
       items: [
-        'Răspunsul la cererea de ofertă și pregătirea ofertei, prin formular, telefon sau WhatsApp: demersuri făcute la cererea dumneavoastră înainte de încheierea unui contract (art. 6 alin. (1) lit. b GDPR).',
+        'Răspunsul la cererea de ofertă și pregătirea ofertei, prin formularul de pe website, formularul din reclamele Google, telefon sau WhatsApp: demersuri făcute la cererea dumneavoastră înainte de încheierea unui contract (art. 6 alin. (1) lit. b GDPR).',
         'Realizarea statisticilor de utilizare și măsurarea eficienței reclamelor cu ajutorul Google Analytics 4 și Google Ads: consimțământul dumneavoastră, dat prin butonul „Accept” (art. 6 alin. (1) lit. a GDPR și art. 4 din Legea nr. 506/2004). Vă puteți retrage oricând consimțământul, fără a afecta prelucrarea făcută înainte de retragere.',
         'Afișarea hărții Google Maps: acțiunea dumneavoastră de a apăsa „Afișează harta”, după ce ați fost informat că harta este încărcată de la Google (art. 6 alin. (1) lit. a GDPR).',
         'Funcționarea, securitatea și prevenirea abuzurilor (jurnale tehnice ale serverului, protecția anti-spam a formularului, salvarea alegerii privind cookie-urile): interesul nostru legitim de a avea un website sigur și funcțional (art. 6 alin. (1) lit. f GDPR).',
@@ -94,7 +113,7 @@ const doc: LegalDoc = {
       items: [
         'Web3Forms (operat de Web3Creative, India): primește datele din formular, le verifică împotriva spamului și le trimite pe adresa de email a firmei. Acționează ca persoană împuternicită, pe baza acordului său de prelucrare a datelor. Folosește la rândul său subcontractanți pentru infrastructură (de exemplu Amazon Web Services, Cloudflare, Hetzner) și pentru filtrarea spamului (CleanTalk și Akismet, care pot primi adresa IP și adresa de email a celui care trimite formularul).',
         'Cloudflare, Inc. (SUA), prin serviciul Cloudflare Pages: găzduiește website-ul și îl livrează prin rețeaua sa, prelucrând date tehnice ale cererilor (de exemplu adresa IP) pentru livrare și securitate. Acționează ca persoană împuternicită.',
-        'Google: furnizorul căsuței de email în care primim cererile (Gmail). După „Accept”, Google furnizează statisticile Google Analytics 4 și măsurarea conversiilor Google Ads. Pentru Analytics, Google prelucrează datele conform condițiilor sale privind protecția datelor, iar pentru serviciile de publicitate acționează și ca operator independent. După click pe „Afișează harta”, Google furnizează și harta Google Maps. Pentru utilizatorii din Spațiul Economic European, serviciile Google sunt oferite de Google Ireland Limited.',
+        'Google: furnizorul căsuței de email în care primim cererile (Gmail). Google găzduiește și formularul de contact din reclamele noastre și ne transmite datele completate în el prin contul Google Ads. După „Accept”, Google furnizează statisticile Google Analytics 4 și măsurarea conversiilor Google Ads. Pentru Analytics, Google prelucrează datele conform condițiilor sale privind protecția datelor, iar pentru serviciile de publicitate acționează și ca operator independent. După click pe „Afișează harta”, Google furnizează și harta Google Maps. Pentru utilizatorii din Spațiul Economic European, serviciile Google sunt oferite de Google Ireland Limited.',
         'WhatsApp Ireland Limited (grupul Meta) și operatorul dumneavoastră de telefonie: pentru conversațiile pe care le inițiați prin aceste canale, conform propriilor politici.',
         'Autorități publice, instanțe sau consultanți (de exemplu contabil sau avocat): doar când legea o cere sau când este necesar pentru apărarea unui drept.',
       ],
@@ -125,6 +144,7 @@ const doc: LegalDoc = {
         'Cererile de ofertă și conversațiile care nu devin contract: cel mult 12 luni de la ultimul contact, apoi le ștergem.',
         'Datele din cererile care devin contract: pe durata contractului și apoi cât timp cere legea, inclusiv perioada de arhivare a documentelor financiar-contabile.',
         'Jurnalele tehnice ale serverului: pe perioada scurtă stabilită de furnizorul de găzduire pentru planul folosit. Cloudflare poate păstra separat, ca operator, date tehnice generate de serviciu, conform propriei politici de confidențialitate.',
+        'Cererile trimise prin formularul din reclamele Google: pot fi descărcate din contul Google Ads timp de 30 de zile. Copia păstrată de noi (în email sau descărcată) urmează regula de mai sus pentru cererile de ofertă.',
         'Copia cererii păstrată de Web3Forms: perioada de păstrare setată în contul firmei, după care furnizorul o șterge automat. Furnizorul șterge periodic și jurnalele tehnice ale serverelor sale.',
         'Alegerea privind cookie-urile: rămâne în browserul dumneavoastră până o modificați sau ștergeți datele website-ului.',
         'Cookie-urile Google: pe durata indicată în Politica de cookie-uri.',
